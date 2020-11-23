@@ -1,78 +1,113 @@
 @import "variable";
 @import "common";
 
-@mixin test {
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
+body {
+    header {
+        width: 48px;
+        height: 100vh;
 
-header {
-    width: 48px;
-    height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
 
-    position: fixed;
-    left: 0;
-    top: 0;
+        transition: all 0.4s ease-in-out;
+        .openTime {
+            user-select: none;
+            position: absolute;
+            right: $spacing-s;
+            top: $spacing-s;
 
-    transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
-    .openTime {
-        user-select: none;
-        position: absolute;
-        right: 15px;
-        top: 16px;
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
 
-        transform: rotate(180deg);
-        writing-mode: vertical-rl;
+            font-family: "Roboto Slab", "Noto Serif TC", serif;
+            line-height: $spacing-s;
+            font-size: 12px;
+            color: $header-fontColor;
+            letter-spacing: 0.05em;
+            text-indent: 0.05em;
+            span {
+                font-weight: 700;
+                margin-top: $spacing-2xs;
+            }
+        }
 
-        font-family: "Roboto Slab", "Noto Serif TC", serif;
-        font-weight: 700;
-        color: $header-fontColor;
-        letter-spacing: 0.05em;
+        .humburger {
+            width: $spacing-s;
+            height: $spacing-l;
 
-        span {
-            font-weight: 500;
-            margin-bottom: $spacing-xs;
+            position: absolute;
+            top: 50%;
+            right: $spacing-s;
+            transform: translate(0, -50%);
+
+            display: flex;
+            flex-direction: stretch;
+            justify-content: space-between;
+
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                cursor: pointer;
+            }
+            .manuOpener_line {
+                display: inline-block;
+                width: 4px;
+                background-color: $header-fontColor;
+            }
+        }
+
+        .navCloser {
+            user-select: none;
+            position: absolute;
+            right: $spacing-s;
+            bottom: $spacing-s;
+
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
+
+            font-family: "Roboto Slab", "Noto Serif TC", serif;
+            line-height: $spacing-s;
+            font-size: 14px;
+            color: $header-fontColor;
+            letter-spacing: 0.05em;
+            text-indent: 0.05em;
+
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+            
+            span {
+                margin-top: $spacing-2xs;
+                font-size: $spacing-s;
+            }
         }
     }
 
-    .humburger {
-        width: $spacing-s;
-        height: $spacing-l;
+    #container {
+        height: 2000px;
 
-        position: absolute;
-        top: 50%;
-        right: $spacing-s;
-        transform: translate(0, -50%);
+        margin-left: 48px;
 
-        display: flex;
-        flex-direction: stretch;
-        justify-content: space-between;
-
-        &:hover {
-            cursor: pointer;
-        }
-        .manuOpener_line {
-            display: inline-block;
-            width: 4px;
-            background-color: $header-fontColor;
-        }
+        background: #3e3a39;
+        transition: all 0.4s ease-in-out;
+       
     }
 }
 
-
-
-#container {
-    height: 2000px;
-
-    margin-left: 48px;
-
-    background: #3e3a39;
-    transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
-}
-
-.nav-open{
-    header{
+body.nav-open {
+    header {
         width: 300px;
+        .humburger{
+            opacity: 0;
+            &:hover {
+                cursor: unset;
+            }
+        }
+        .navCloser {
+            opacity: 1;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
     #container {

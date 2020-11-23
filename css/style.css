@@ -1,10 +1,16 @@
 /* reset */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Roboto", "Noto Sans TC", sans-serif,'Roboto Slab','Noto Serif TC', serif;
+  font-family: "Roboto", "Noto Sans TC", sans-serif, "Roboto Slab", "Noto Serif TC", serif;
+  font-weight: 400;
 }
 
 a {
@@ -60,23 +66,23 @@ p {
   margin: 0;
 }
 
-header {
+body header {
   width: 48px;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
-  transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-header .openTime {
+body header .openTime {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   position: absolute;
-  right: 15px;
+  right: 16px;
   top: 16px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -84,17 +90,19 @@ header .openTime {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   font-family: "Roboto Slab", "Noto Serif TC", serif;
-  font-weight: 700;
+  line-height: 16px;
+  font-size: 12px;
   color: #3e3a39;
   letter-spacing: 0.05em;
+  text-indent: 0.05em;
 }
 
-header .openTime span {
-  font-weight: 500;
-  margin-bottom: 8px;
+body header .openTime span {
+  font-weight: 700;
+  margin-top: 4px;
 }
 
-header .humburger {
+body header .humburger {
   width: 16px;
   height: 36px;
   position: absolute;
@@ -112,31 +120,78 @@ header .humburger {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-header .humburger:hover {
+body header .humburger:hover {
   cursor: pointer;
 }
 
-header .humburger .manuOpener_line {
+body header .humburger .manuOpener_line {
   display: inline-block;
   width: 4px;
   background-color: #3e3a39;
 }
 
-#container {
+body header .navCloser {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: "Roboto Slab", "Noto Serif TC", serif;
+  line-height: 16px;
+  font-size: 14px;
+  color: #3e3a39;
+  letter-spacing: 0.05em;
+  text-indent: 0.05em;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body header .navCloser span {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+body #container {
   height: 2000px;
   margin-left: 48px;
   background: #3e3a39;
-  -webkit-transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
-  transition: all 0.6s cubic-bezier(0.05, 1, 0.61, 1);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.nav-open header {
+body.nav-open header {
   width: 300px;
 }
 
-.nav-open #container {
+body.nav-open header .humburger {
+  opacity: 0;
+}
+
+body.nav-open header .humburger:hover {
+  cursor: unset;
+}
+
+body.nav-open header .navCloser {
+  opacity: 1;
+}
+
+body.nav-open header .navCloser:hover {
+  cursor: pointer;
+}
+
+body.nav-open #container {
   margin-left: 300px;
 }
 /*# sourceMappingURL=style.css.map */

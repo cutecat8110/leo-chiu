@@ -24,12 +24,17 @@
 
 /* reset */
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%; //設定回歸到10px（原本是16px，乘以62.5%後就為10px）
 }
 
 body {
-    font-family: "Roboto", "Noto Sans TC", sans-serif,'Roboto Slab','Noto Serif TC', serif;
+    font-family: "Roboto", "Noto Sans TC", sans-serif, "Roboto Slab", "Noto Serif TC", serif;
+    font-weight: 400;
 }
 
 a {
