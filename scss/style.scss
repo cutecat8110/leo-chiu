@@ -2,6 +2,7 @@
 @import "common";
 
 body {
+    overflow-x: hidden;
     header {
         width: 48px;
         height: 100vh;
@@ -12,7 +13,6 @@ body {
 
         transition: all 0.4s ease-in-out;
         .openTime {
-            user-select: none;
             position: absolute;
             right: $spacing-s;
             top: $spacing-s;
@@ -20,14 +20,18 @@ body {
             transform: rotate(180deg);
             writing-mode: vertical-rl;
 
-            font-family: "Roboto Slab", "Noto Serif TC", serif;
-            line-height: $spacing-s;
-            font-size: 12px;
+            font-weight: 700;
             color: $header-fontColor;
             letter-spacing: 0.05em;
             text-indent: 0.05em;
-            span {
-                font-weight: 700;
+            line-height: $spacing-s;
+
+            user-select: none;
+
+            span:first-child {
+                font-family: "Lora", "Noto Serif TC", serif;
+            }
+            span:last-child {
                 margin-top: $spacing-2xs;
             }
         }
@@ -45,11 +49,11 @@ body {
             flex-direction: stretch;
             justify-content: space-between;
 
-            transition: all 0.2s ease-in-out;
+            transition: all 0.2s 0.2s ease-in-out;
             &:hover {
                 cursor: pointer;
             }
-            .manuOpener_line {
+            .manuOpener-line {
                 display: inline-block;
                 width: 4px;
                 background-color: $header-fontColor;
@@ -57,7 +61,6 @@ body {
         }
 
         .navCloser {
-            user-select: none;
             position: absolute;
             right: $spacing-s;
             bottom: $spacing-s;
@@ -65,38 +68,353 @@ body {
             transform: rotate(180deg);
             writing-mode: vertical-rl;
 
-            font-family: "Roboto Slab", "Noto Serif TC", serif;
+            font-weight: 500;
+            font-family: "Lora", "Noto Serif TC", serif;
             line-height: $spacing-s;
-            font-size: 14px;
             color: $header-fontColor;
-            letter-spacing: 0.05em;
-            text-indent: 0.05em;
 
             opacity: 0;
-            transition: all 0.2s ease-in-out;
-            
-            span {
+            transition: all 0.2s 0.2s ease-in-out;
+
+            user-select: none;
+
+            span:first-child {
+                font-size: 1.4rem;
+            }
+            span:last-child {
                 margin-top: $spacing-2xs;
                 font-size: $spacing-s;
+            }
+        }
+        nav {
+            position: absolute;
+            top: 50%;
+            left: 60px;
+            transform: translateY(-50%);
+
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.1s ease-in-out;
+            user-select: none;
+
+            ul {
+                li {
+                    margin-bottom: $spacing-s;
+                    h4 {
+                        white-space: nowrap;
+                        font-family: "Lora", "Noto Serif TC", serif;
+                        i {
+                            margin-right: $spacing-xs;
+                        }
+                    }
+                }
             }
         }
     }
 
     #container {
-        height: 2000px;
+        position: relative;
+        left: 0;
+        height: 20000px;
 
         margin-left: 48px;
 
-        background: #3e3a39;
+        background: #f3f0e9;
         transition: all 0.4s ease-in-out;
-       
+        .banner {
+            height: 100vh;
+
+            background-image: url("https://picsum.photos/1920/1080");
+            background-position: center;
+            background-size: cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo {
+                height: 200px;
+                width: 450px;
+                border: 1px solid #000000;
+            }
+        }
+        main {
+            .content {
+                padding-left: 14%;
+                padding-right: 14%;
+            }
+
+            .content-s {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            #about {
+                .story-1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    padding-top: $spacing-2xl;
+                    padding-bottom: $spacing-2xl;
+
+                    .text {
+                        text-align: center;
+                        h6 {
+                            margin-bottom: $spacing-l;
+                        }
+                        h3 {
+                            padding-bottom: $spacing-s;
+                        }
+                        h5 {
+                            margin-bottom: $spacing-xl;
+                        }
+                    }
+
+                    .img-wrapper {
+                        height: 22vw;
+                        width: 100%;
+
+                        display: grid;
+                        grid-template-columns: repeat(21, 1fr);
+                        grid-column-gap: $spacing-l;
+
+                        :first-child {
+                            grid-column-start: 1;
+                            grid-column-end: 9;
+
+                            background-image: url("https://picsum.photos/1920/1080");
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        :nth-child(2) {
+                            grid-column-start: 9;
+                            grid-column-end: 14;
+
+                            background-image: url("https://picsum.photos/1920/1080");
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        :last-child {
+                            grid-column-start: 14;
+                            grid-column-end: 22;
+
+                            background-image: url("https://picsum.photos/1920/1080");
+                            background-position: center;
+                            background-size: cover;
+                        }
+                    }
+                }
+                .story-2 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    background-color: #eae3d7;
+
+                    .text {
+                        text-align: center;
+                        padding: 33% 12%;
+
+                        h3 {
+                            padding-bottom: $spacing-s;
+                        }
+
+                        h5 {
+                            margin-bottom: $spacing-xl;
+                        }
+                    }
+                    .img {
+                        background-image: url("https://picsum.photos/1920/1080");
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                .story-3 {
+                    display: grid;
+                    grid-template-columns: repeat(21, 1fr);
+                    background-color: #c5b796;
+                    padding-top: $spacing-2xl;
+                    padding-bottom: $spacing-2xl;
+                    .img {
+                        grid-column-start: 1;
+                        grid-column-end: 10;
+
+                        background-image: url("https://picsum.photos/1920/1080");
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .text {
+                        grid-column-start: 13;
+                        grid-column-end: 22;
+
+                        padding: 33% 0%;
+
+                        text-align: center;
+                        h6 {
+                            margin-bottom: $spacing-l;
+                        }
+                        h3 {
+                            padding-bottom: $spacing-s;
+                        }
+                    }
+                }
+            }
+            #newsLetter {
+                background-color: #eae3d7;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                padding-top: $spacing-2xl;
+                padding-bottom: $spacing-2xl;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h6 {
+                        margin-bottom: $spacing-l;
+                    }
+                }
+                .swiper-button-container {
+                    width: 100%;
+                    position: relative;
+                    .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        position: static;
+                        user-select: none;
+                        .swiper-slide {
+                            background-image: url("https://picsum.photos/1920/1080");
+                            background-position: center;
+                            background-size: cover;
+
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                padding-bottom: 100%;
+                                color: blue;
+                            }
+
+                            .more {
+                                width: 100%;
+                                height: 100%;
+
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+
+                                font-size: 1.4rem;
+                                color: #ffffff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: rgba(170, 190, 203, 0.8);
+                                opacity: 0;
+                                transition: all 0.1s ease-in-out;
+
+                                &:hover {
+                                    opacity: 1;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            .block {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                font-size: 1.4rem;
+                                background: #ffffff;
+                                max-width: 66%;
+                                padding: $spacing-s;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                .data {
+                                    margin-bottom: $spacing-xs;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .tag {
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+                                    .line {
+                                        display: block;
+                                        width: 1px;
+                                        height: 1.4rem;
+                                        background-color: #000000;
+                                        margin: 0 $spacing-xs;
+                                    }
+                                }
+
+                                .title {
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        .swiper-button-next {
+                            left: 95%;
+                            right: auto;
+                            &::after {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 10px 0 10px $spacing-s;
+                                border-color: transparent transparent transparent #aabecb;
+                            }
+                        }
+                        .swiper-button-prev {
+                            right: 95%;
+                            left: auto;
+                            &::after {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 10px $spacing-s 10px 0;
+                                border-color: transparent #aabecb transparent transparent;
+                            }
+                        }
+                    }
+                }
+            }
+            #menu {
+                padding-top: $spacing-2xl;
+                padding-bottom: $spacing-2xl;
+                background-color: #c5b796;
+                display: flex;
+
+                .text {
+                    writing-mode: vertical-lr;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    padding-right: $spacing-l;
+                }
+
+                .test {
+                    width: 100%;
+                    background: lightcoral;
+                    .swiper-container {
+                        width: 100%;
+                        height: 300px;
+                        .swiper-slide {
+                            background-size: cover;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 body.nav-open {
     header {
         width: 300px;
-        .humburger{
+        .humburger {
             opacity: 0;
             &:hover {
                 cursor: unset;
@@ -104,13 +422,19 @@ body.nav-open {
         }
         .navCloser {
             opacity: 1;
+
             &:hover {
                 cursor: pointer;
             }
         }
+        nav {
+            transition: all 0.2s 0.2s ease-in-out;
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     #container {
-        margin-left: 300px;
+        left: 252px;
     }
 }

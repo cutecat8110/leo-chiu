@@ -24,7 +24,7 @@
 
 /* reset */
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -33,12 +33,14 @@ html {
 }
 
 body {
-    font-family: "Roboto", "Noto Sans TC", sans-serif, "Roboto Slab", "Noto Serif TC", serif;
+    font-family: "Lora", serif;
+    font-family: "Roboto", "Lora", "Noto Sans TC", "Noto Serif TC", sans-serif, serif;
     font-weight: 400;
 }
 
 a {
     text-decoration: none;
+    color: #212121;
 }
 
 ul {
@@ -47,35 +49,52 @@ ul {
     padding: 0;
 }
 
-// h1~h6,p
+//h1~h6,p
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    line-height: 1.5;
     margin: 0;
 }
 
-h1 {
-    font-size: 8rem;
+h1 //僅一
+{
 }
-h2 {
-    font-size: 5.6rem;
-}
-h3 {
+
+h2 //標題
+{
     font-size: 4.8rem;
+    line-height: 5.6rem;
 }
-h4 {
+
+h3 //輔助標語
+{
     font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 400;
 }
-h5 {
+
+h4 //側邊欄
+{
     font-size: 2rem;
+    line-height: 2.8rem;
+    font-weight: 500;
 }
-h6 {
-    font-size: 1.2rem;
+
+h5 //footer
+{
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+}
+
+h6 //英文 標題
+{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 700;
 }
 
 b {

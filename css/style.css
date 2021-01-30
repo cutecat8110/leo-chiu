@@ -9,12 +9,14 @@ html {
 }
 
 body {
-  font-family: "Roboto", "Noto Sans TC", sans-serif, "Roboto Slab", "Noto Serif TC", serif;
+  font-family: "Lora", serif;
+  font-family: "Roboto", "Lora", "Noto Sans TC", "Noto Serif TC", sans-serif, serif;
   font-weight: 400;
 }
 
 a {
   text-decoration: none;
+  color: #212121;
 }
 
 ul {
@@ -29,33 +31,36 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  line-height: 1.5;
   margin: 0;
 }
 
-h1 {
-  font-size: 8rem;
-}
-
 h2 {
-  font-size: 5.6rem;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
 }
 
 h3 {
-  font-size: 4.8rem;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 400;
 }
 
 h4 {
-  font-size: 3.2rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-weight: 500;
 }
 
 h5 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 400;
 }
 
 h6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 700;
 }
 
 b {
@@ -64,6 +69,10 @@ b {
 
 p {
   margin: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body header {
@@ -77,10 +86,6 @@ body header {
 }
 
 body header .openTime {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: absolute;
   right: 16px;
   top: 16px;
@@ -89,16 +94,22 @@ body header .openTime {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  font-family: "Roboto Slab", "Noto Serif TC", serif;
-  line-height: 16px;
-  font-size: 12px;
+  font-weight: 700;
   color: #3e3a39;
   letter-spacing: 0.05em;
   text-indent: 0.05em;
+  line-height: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body header .openTime span {
-  font-weight: 700;
+body header .openTime span:first-child {
+  font-family: "Lora", "Noto Serif TC", serif;
+}
+
+body header .openTime span:last-child {
   margin-top: 4px;
 }
 
@@ -120,25 +131,21 @@ body header .humburger {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s 0.2s ease-in-out;
+  transition: all 0.2s 0.2s ease-in-out;
 }
 
 body header .humburger:hover {
   cursor: pointer;
 }
 
-body header .humburger .manuOpener_line {
+body header .humburger .manuOpener-line {
   display: inline-block;
   width: 4px;
   background-color: #3e3a39;
 }
 
 body header .navCloser {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: absolute;
   right: 16px;
   bottom: 16px;
@@ -147,28 +154,423 @@ body header .navCloser {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  font-family: "Roboto Slab", "Noto Serif TC", serif;
+  font-weight: 500;
+  font-family: "Lora", "Noto Serif TC", serif;
   line-height: 16px;
-  font-size: 14px;
   color: #3e3a39;
-  letter-spacing: 0.05em;
-  text-indent: 0.05em;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s 0.2s ease-in-out;
+  transition: all 0.2s 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body header .navCloser span {
+body header .navCloser span:first-child {
+  font-size: 1.4rem;
+}
+
+body header .navCloser span:last-child {
   margin-top: 4px;
   font-size: 16px;
 }
 
+body header nav {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body header nav ul li {
+  margin-bottom: 16px;
+}
+
+body header nav ul li h4 {
+  white-space: nowrap;
+  font-family: "Lora", "Noto Serif TC", serif;
+}
+
+body header nav ul li h4 i {
+  margin-right: 8px;
+}
+
 body #container {
-  height: 2000px;
+  position: relative;
+  left: 0;
+  height: 20000px;
   margin-left: 48px;
-  background: #3e3a39;
+  background: #f3f0e9;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+body #container .banner {
+  height: 100vh;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #container .banner .logo {
+  height: 200px;
+  width: 450px;
+  border: 1px solid #000000;
+}
+
+body #container main .content {
+  padding-left: 14%;
+  padding-right: 14%;
+}
+
+body #container main .content-s {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+body #container main #about .story-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+body #container main #about .story-1 .text {
+  text-align: center;
+}
+
+body #container main #about .story-1 .text h6 {
+  margin-bottom: 36px;
+}
+
+body #container main #about .story-1 .text h3 {
+  padding-bottom: 16px;
+}
+
+body #container main #about .story-1 .text h5 {
+  margin-bottom: 72px;
+}
+
+body #container main #about .story-1 .img-wrapper {
+  height: 22vw;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+  grid-column-gap: 36px;
+}
+
+body #container main #about .story-1 .img-wrapper :first-child {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 9;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+}
+
+body #container main #about .story-1 .img-wrapper :nth-child(2) {
+  -ms-grid-column: 9;
+      grid-column-start: 9;
+  grid-column-end: 14;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+}
+
+body #container main #about .story-1 .img-wrapper :last-child {
+  -ms-grid-column: 14;
+      grid-column-start: 14;
+  grid-column-end: 22;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+}
+
+body #container main #about .story-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  background-color: #eae3d7;
+}
+
+body #container main #about .story-2 .text {
+  text-align: center;
+  padding: 33% 12%;
+}
+
+body #container main #about .story-2 .text h3 {
+  padding-bottom: 16px;
+}
+
+body #container main #about .story-2 .text h5 {
+  margin-bottom: 72px;
+}
+
+body #container main #about .story-2 .img {
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+}
+
+body #container main #about .story-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+  background-color: #c5b796;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+body #container main #about .story-3 .img {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 10;
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+}
+
+body #container main #about .story-3 .text {
+  -ms-grid-column: 13;
+      grid-column-start: 13;
+  grid-column-end: 22;
+  padding: 33% 0%;
+  text-align: center;
+}
+
+body #container main #about .story-3 .text h6 {
+  margin-bottom: 36px;
+}
+
+body #container main #about .story-3 .text h3 {
+  padding-bottom: 16px;
+}
+
+body #container main #newsLetter {
+  background-color: #eae3d7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+body #container main #newsLetter .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #container main #newsLetter .text h6 {
+  margin-bottom: 36px;
+}
+
+body #container main #newsLetter .swiper-button-container {
+  width: 100%;
+  position: relative;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container {
+  width: 100%;
+  height: 100%;
+  position: static;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide {
+  background-image: url("https://picsum.photos/1920/1080");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  color: blue;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .more {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(170, 190, 203, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .more:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 1.4rem;
+  background: #ffffff;
+  max-width: 66%;
+  padding: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data {
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data .tag {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data .line {
+  display: block;
+  width: 1px;
+  height: 1.4rem;
+  background-color: #000000;
+  margin: 0 8px;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-next {
+  left: 95%;
+  right: auto;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-next::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #aabecb;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-prev {
+  right: 95%;
+  left: auto;
+}
+
+body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-prev::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 16px 10px 0;
+  border-color: transparent #aabecb transparent transparent;
+}
+
+body #container main #menu {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #c5b796;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container main #menu .text {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-right: 36px;
+}
+
+body #container main #menu .test {
+  width: 100%;
+  background: lightcoral;
+}
+
+body #container main #menu .test .swiper-container {
+  width: 100%;
+  height: 300px;
+}
+
+body #container main #menu .test .swiper-container .swiper-slide {
+  background-size: cover;
+  background-position: center;
 }
 
 body.nav-open header {
@@ -191,7 +593,14 @@ body.nav-open header .navCloser:hover {
   cursor: pointer;
 }
 
+body.nav-open header nav {
+  -webkit-transition: all 0.2s 0.2s ease-in-out;
+  transition: all 0.2s 0.2s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
 body.nav-open #container {
-  margin-left: 300px;
+  left: 252px;
 }
 /*# sourceMappingURL=style.css.map */
