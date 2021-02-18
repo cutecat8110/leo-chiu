@@ -4,10 +4,10 @@ $spacing-s: 16px;
 $spacing-m: 24px;
 $spacing-l: 36px;
 $spacing-xl: 72px;
-$spacing-2xl: 160px;
+$spacing-2xl: 160px; //主題間距
 
-//color
-$header-fontColor: #3e3a39;
+$aside-close-with: 48px;
+$aside-open-with: 256px;
 
 //z-index
 // 用法 : z-index: z("modal", "close"); z-index: z("goku");

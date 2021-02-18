@@ -35,7 +35,8 @@ html {
 body {
     font-family: "Lora", serif;
     font-family: "Roboto", "Lora", "Noto Sans TC", "Noto Serif TC", sans-serif, serif;
-    font-weight: 400;
+    font-weight: 400; 
+    color: #3E3A39;
 }
 
 a {
@@ -103,4 +104,10 @@ b {
 
 p {
     margin: 0;
+}
+
+//共用padding
+%block-space {
+    padding-top: $spacing-2xl;
+    padding-bottom: $spacing-2xl;
 }

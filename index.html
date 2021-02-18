@@ -22,40 +22,61 @@
 </head>
 
 <body>
-    <header>
 
-        <p class="openTime">
-            <span>OPEN TIME</span>
-            <span>11:00~21:00</span>
-        </p>
-        <div class="humburger">
-            <span class="manuOpener-line"></span>
-            <span class="manuOpener-line"></span>
+    <header></header>
+
+    <aside>
+
+        <div class="navOpener">
+
+            <p class="openTime">
+                <span>OPEN TIME</span>
+                <span>11:00~21:00</span>
+            </p>
+
+            <div class="humburger">
+                <span></span>
+                <span></span>
+            </div>
+
+            <p class="navCloser">
+                <span>CLOSE</span>
+                <span><i class="fas fa-caret-right"></i></span>
+            </p>
+
         </div>
-        <p class="navCloser">
-            <span>CLOSE</span>
-            <span><i class="fas fa-caret-right"></i></span>
-        </p>
 
-        <nav>
+        <nav class="banner-point">
             <ul>
                 <li>
-                    <h4>TOP</h4>
+                    <a href="#banner-point">
+                        <h4 class="banner-point">TOP</h4>
+                    </a>
                 </li>
                 <li>
-                    <h4>ABOUT</h4>
+                    <a href="#about-point">
+                        <h4 class="about-point">ABOUT</h4>
+                    </a>
                 </li>
                 <li>
-                    <h4>NEWS LETTER</h4>
+                    <a href="#newsLetter-point">
+                        <h4 class="newsLetter-point">NEWS LETTER</h4>
+                    </a>
                 </li>
                 <li>
-                    <h4>MENU</h4>
+                    <a href="#menu-point">
+                        <h4 class="menu-point">MENU</h4>
+                    </a>
                 </li>
                 <li>
-                    <h4>SHOP INFO</h4>
+                    <a href="#shopInfo-point">
+                        <h4 class="shopInfo-point">SHOP INFO</h4>
+                    </a>
                 </li>
                 <li>
-                    <h4>CONTACT</h4>
+                    <a href="#contact-point">
+                        <h4 class="contact-point">CONTACT</h4>
+                    </a>
                 </li>
                 <li>
                     <h4>
@@ -67,20 +88,30 @@
             </ul>
         </nav>
 
-    </header>
+    </aside>
 
+    <div id="banner">
+
+        <div id="banner-point"></div>
+
+        <div class="mask">
+            <img src="img/logo/樂丘_logo.svg" alt="" class="svg logo">
+        </div>
+
+        
+    </div>
+    
     <div id="container">
 
-        <div class="banner">
-            <div class="logo"></div>
-        </div>
+        
 
         <main>
 
+            <div class="banner-space"></div>
             <div id="about">
+                <div id="about-point"></div>
 
-                <div class="story-1 content">
-
+                <div class="story-1 content-s">
                     <div class="text">
                         <h2>
                             樂丘故事
@@ -95,13 +126,11 @@
                             樂丘廚房裡正烘烤片片焦糖色鬆餅，蓬鬆且入口即化的口感，是老闆尋覓已久的幸福滋味。
                         </h5>
                     </div>
-
                     <div class="img-wrapper">
                         <div class="img"></div>
                         <div class="img"></div>
                         <div class="img"></div>
                     </div>
-
                 </div>
 
                 <div class="story-2">
@@ -116,10 +145,8 @@
                     <div class="img"></div>
                 </div>
 
-                <div class="story-3 content">
-
+                <div class="story-3 content-m">
                     <div class="img"></div>
-
                     <div class="text">
                         <h2>
                             品牌理念
@@ -139,6 +166,9 @@
             </div>
 
             <div id="newsLetter">
+
+                <div id="newsLetter-point"></div>
+
                 <div class="text">
                     <h2>
                         最新消息
@@ -147,11 +177,12 @@
                         NEWS LETTER
                     </h6>
                 </div>
+
                 <!-- Swiper -->
-                <div class="swiper-button-container content-s">
+                <div class="swiper-button-container content-l">
                     <div class="swiper-container swiper-container1">
-                        <!--使用swiper-container1類名，加以區分容器-->
                         <div class="swiper-wrapper">
+
                             <!-- 1 -->
                             <div class="swiper-slide">
                                 <p class="more">
@@ -168,6 +199,7 @@
                                     <div class="title">♥️七夕情人節 「心干寶貝限定套餐」</div>
                                 </div>
                             </div>
+
                             <!-- 2 -->
                             <div class="swiper-slide">
                                 <p class="more">
@@ -184,6 +216,7 @@
                                     <div class="title">♥️七夕情人節 「心干寶貝限定套餐」</div>
                                 </div>
                             </div>
+
                             <!-- 3 -->
                             <div class="swiper-slide">
                                 <p class="more">
@@ -206,60 +239,340 @@
 
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+
                     </div>
+                </div>
+
+            </div>
+
+            <div id="menu">
+
+                <div id="menu-point"></div>
+
+                <div class="menu content-l">
+                    <div class="wrapper">
+
+                        <div class="boxes">
+
+                            <div class="text">
+                                <h2>
+                                    經典餐品
+                                </h2>
+                                <h6>
+                                    OUR MENU
+                                </h6>
+                            </div>
+
+                            <div class="swiper-combine">
+
+                                <div class="swiper-container gallery-top">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">1</div>
+                                        <div class="swiper-slide">2</div>
+                                        <div class="swiper-slide">3</div>
+                                        <div class="swiper-slide">4</div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="swiper-container gallery-thumbs">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">1</div>
+                                        <div class="swiper-slide">2</div>
+                                        <div class="swiper-slide">3</div>
+                                        <div class="swiper-slide">4</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charge content-s">
+
+                    <div class="text">
+                        <span>
+                            <h2>
+                                消費方式
+                            </h2>
+                            <h6>
+                                MINIMUM CHARGE
+                            </h6>
+                        </span>
+
+                        <h3>
+                            每人低消一份餐點或甜點
+                        </h3>
+                        <h5>
+                            （ 不含開胃菜及飲料 ）
+                        </h5>
+                        <h3>
+                            禁帶外食，用餐時間
+                            <span>90</span>
+                            分鐘
+                        </h3>
+                        <h5>
+                            （ 以訂位時間起計 ）
+                        </h5>
+
+                    </div>
+
+                    <div class="img-wrapper">
+                        <div class="img"></div>
+                        <div class="img"></div>
+                    </div>
+
                 </div>
             </div>
 
-            <div id="menu" class="content-s ">
+            <div id="shopInfo" class=" content-m">
+
+                <div id="shopInfo-point"></div>
+
                 <div class="text">
                     <h2>
-                        經典餐品
+                        分店・訂位資訊
                     </h2>
                     <h6>
-                        OUR MENU
+                        SHOP・TABLE INFO
+                    </h6>
+                </div>
+                <div class="box">
+
+                    <div class="data">
+                        <h3>東海總店</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>地址</th>
+                                    <td>
+                                        台中市龍井區台灣大道五段三巷62弄13號<br>
+                                        (東海大學商圈)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>電話</th>
+                                    <td>
+                                        (04) 2652-8300
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>粉專</th>
+                                    <td>
+                                        https://www.facebook.com/LEOCHIU.WAFFLE/
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>營業時間</th>
+                                    <td>
+                                        週一至週日：11:00～21:00．最後收客時間：20:30<br>
+                                        ※ 例假日及特殊節日會有些許變動，請多留意
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btn-wrapper">
+                            <div class="btn">線上訂位</div>
+                            <div class="btn">訂購 Uber Eats</div>
+                        </div>
+
+                    </div>
+
+                    <div class="img"></div>
+                    <div class="img"></div>
+
+                    <div class="data">
+                        <h3>一中店</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>地址</th>
+                                    <td>
+                                        台中市北區新北里一中街96號2樓之2<br>
+                                        (一中愛廣場)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>電話</th>
+                                    <td>
+                                        (04) 2222-0330
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>粉專</th>
+                                    <td>
+                                        https://www.facebook.com/LEOCHIU02/
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>營業時間</th>
+                                    <td>
+                                        週一至週日：11:00～21:00．最後收客時間：20:30<br>
+                                        ※ 例假日及特殊節日會有些許變動，請多留意
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btn-wrapper">
+                            <div class="btn">線上訂位</div>
+                            <div class="btn">訂購 Uber Eats</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="contact" class="content-m">
+
+                <div id="contact-point"></div>
+
+                <div class="text">
+                    <h2>
+                        聯絡我們・FAQ
+                    </h2>
+                    <h6>
+                        CONTACT・FAQ
                     </h6>
                 </div>
 
-                <div class="test">
-                    <!-- Swiper -->
-                    <div class="swiper-container gallery-top">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                        </div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next swiper-button-white"></div>
-                        <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="contact-wapper">
+
+                    <div class="btn-group">
+                        <div class="btn active">聯絡我們</div>
+                        <div class="btn">常見問題（FAQ）</div>
                     </div>
-                    <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
+
+                    <div class="contact-container">
+                        <div class="contact">
+
+                            <div class="remark">
+                                ※ 預約相關問題，請直接撥門市電話，有專人為你服務。<br>
+                                ※ 如需預約，歡迎使用 樂丘線上訂位系統 。
+                            </div>
+
+                            <div class="contactWrap">
+
+                                <dl>
+                                    <dt>店鋪</dt>
+                                    <dd>
+                                        <div class="selectWrap">
+                                            <select>
+                                                <option value="" selected="selected">請選擇</option>
+                                                <option value="東海總店">東海總店</option>
+                                                <option value="一中店">一中店</option>
+                                            </select>
+                                        </div>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>來店日期(選填)</dt>
+                                    <dd>
+                                        <input id="date" type="date" name="day" size="60" value="">
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>姓名</dt>
+                                    <dd>
+                                        <input type="text" name="name" size="60" value="">
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>電話</dt>
+                                    <dd>
+                                        <input type="text" name="phone" size="60" value="">
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>電子信箱</dt>
+                                    <dd>
+                                        <input type="text" name="mail" size="60" value="">
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>意見欄</dt>
+                                    <dd>
+                                        <textarea name="detail" cols="50" rows="5"></textarea>
+                                    </dd>
+                                </dl>
+
+                            </div>
+
+                            <div class="check-btn">
+                                <h5>確認送出</h5>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
-
-
-
             </div>
+
         </main>
-        <footer></footer>
+
+        <footer>
+            <div class="communityBlock">
+                <a href="#banner-point" class="logo-wrapper">
+                    <img src="img/logo/樂丘_logo.svg" alt="樂丘廚房" class="logo">
+                </a>
+                <a href="" class="community">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="" class="community">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="" class="community">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul class="copyrightBlock">
+
+                <li>
+                    <a href="">
+                        <h5>說明</h5>
+                    </a>
+                </li>
+
+                <li>
+                    <h5>
+                        ．
+                    </h5>
+                </li>
+
+                <li>
+                    <a href="">
+                        <h5>隱私權政策</h5>
+                    </a>
+                </li>
+
+                <li>
+                    <h5>
+                        ．
+                    </h5>
+                </li>
+
+                <li>
+                    <a href="">
+                        <h5>服務條款</h5>
+                    </a>
+                </li>
+
+                <li class="copyright">
+                    <h5>Copyright © 2020 Leo Chiu</h5>
+                </li>
+
+            </ul>
+        </footer>
     </div>
 
     <!-- jQuery CDN -->
