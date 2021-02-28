@@ -309,15 +309,15 @@ body #banner-img .banner-swiper .swiper-slide .mask {
 }
 
 body #banner-img .banner-swiper .banner-1 {
-  background-image: url(/img/banner/use-03.jpg);
+  background-image: url(../img/banner/use-03.jpg);
 }
 
 body #banner-img .banner-swiper .banner-2 {
-  background-image: url(/img/banner/use-02.jpg);
+  background-image: url(../img/banner/use-02.jpg);
 }
 
 body #banner-img .banner-swiper .banner-3 {
-  background-image: url(/img/banner/use-01.jpg);
+  background-image: url(../img/banner/use-01.jpg);
 }
 
 body #container {
@@ -444,7 +444,7 @@ body #container main #about .story-1 .img-wrapper :first-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
-  background-image: url(/img/about/use-1.jpg);
+  background-image: url(../img/about/use-1.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -454,7 +454,7 @@ body #container main #about .story-1 .img-wrapper :nth-child(2) {
   -ms-grid-column: 2;
       grid-column-start: 2;
   grid-column-end: 3;
-  background-image: url(/img/about/use-2.jpg);
+  background-image: url(../img/about/use-2.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -464,7 +464,7 @@ body #container main #about .story-1 .img-wrapper :last-child {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
-  background-image: url(/img/about/use-3.jpg);
+  background-image: url(../img/about/use-3.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -492,7 +492,7 @@ body #container main #about .story-2 .text h5 {
 }
 
 body #container main #about .story-2 .img {
-  background-image: url("/img/about/use-41.jpg");
+  background-image: url("../img/about/use-41.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -511,7 +511,7 @@ body #container main #about .story-3 .img {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 10;
-  background-image: url("/img/about/5.jpg");
+  background-image: url("../img/about/5.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -670,35 +670,35 @@ body #container main #newsLetter .swiper-button-container .swiper-container .swi
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-1 {
-  background-image: url("/img/new/2020_08_07.jpg");
+  background-image: url("../img/new/2020_08_07.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-2 {
-  background-image: url("/img/new/2020_05_07.jpg");
+  background-image: url("../img/new/2020_05_07.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-3 {
-  background-image: url("/img/new/2020_05_01.jpg");
+  background-image: url("../img/new/2020_05_01.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-4 {
-  background-image: url("/img/new/2020_04_19.jpg");
+  background-image: url("../img/new/2020_04_19.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-5 {
-  background-image: url("/img/new/2020_04_09.jpg");
+  background-image: url("../img/new/2020_04_09.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-6 {
-  background-image: url("/img/new/2020_03_20.jpg");
+  background-image: url("../img/new/2020_03_20.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-7 {
-  background-image: url("/img/new/2020_02_09.jpg");
+  background-image: url("../img/new/2020_02_09.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-8 {
-  background-image: url("/img/new/2020_02_05.jpg");
+  background-image: url("../img/new/2020_02_05.jpg");
 }
 
 body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-next {
@@ -896,19 +896,19 @@ body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs
 }
 
 body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-1 {
-  background-image: url("/img/menu/use-1.jpg");
+  background-image: url("../img/menu/use-1.jpg");
 }
 
 body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-2 {
-  background-image: url("/img/menu/use-2.jpg");
+  background-image: url("../img/menu/use-2.jpg");
 }
 
 body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-3 {
-  background-image: url("/img/menu/use-3.jpg");
+  background-image: url("../img/menu/use-3.jpg");
 }
 
 body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-4 {
-  background-image: url("/img/menu/use-4.jpg");
+  background-image: url("../img/menu/use-4.jpg");
 }
 
 body #container main #menu .charge {
@@ -967,11 +967,11 @@ body #container main #menu .charge .img-wrapper .img {
 }
 
 body #container main #menu .charge .img-wrapper .chargeImg-01 {
-  background-image: url("/img/menu/use-5.jpg");
+  background-image: url("../img/menu/use-5.jpg");
 }
 
 body #container main #menu .charge .img-wrapper .chargeImg-02 {
-  background-image: url("/img/menu/use-6.jpg");
+  background-image: url("../img/menu/use-6.jpg");
 }
 
 body #container main #shopInfo {
@@ -1029,19 +1029,19 @@ body #container main #shopInfo .box .shop .img .swiper-container .swiper-slide {
 }
 
 body #container main #shopInfo .box .shop .img .swiper-container .shop01-1 {
-  background: url("/img/shopInfo/shop-01/1.jpg");
+  background: url("../img/shopInfo/shop-01/1.jpg");
 }
 
 body #container main #shopInfo .box .shop .img .swiper-container .shop01-2 {
-  background: url("/img/shopInfo/shop-01/2.jpg");
+  background: url("../img/shopInfo/shop-01/2.jpg");
 }
 
 body #container main #shopInfo .box .shop .img .swiper-container .shop01-3 {
-  background: url("/img/shopInfo/shop-01/3.jpg");
+  background: url("../img/shopInfo/shop-01/3.jpg");
 }
 
 body #container main #shopInfo .box .shop .img .swiper-container .shop01-4 {
-  background: url("/img/shopInfo/shop-01/4.jpg");
+  background: url("../img/shopInfo/shop-01/4.jpg");
 }
 
 body #container main #shopInfo .box .shop .data-wrapper {
