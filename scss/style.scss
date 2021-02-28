@@ -228,15 +228,15 @@ body {
             }
 
             .banner-1 {
-                background-image: url(/img/banner/use-03.jpg);
+                background-image: url(../img/banner/use-03.jpg);
             }
 
             .banner-2 {
-                background-image: url(/img/banner/use-02.jpg);
+                background-image: url(../img/banner/use-02.jpg);
             }
 
             .banner-3 {
-                background-image: url(/img/banner/use-01.jpg);
+                background-image: url(../img/banner/use-01.jpg);
             }
         }
     }
@@ -354,7 +354,7 @@ body {
                             grid-column-start: 1;
                             grid-column-end: 2;
 
-                            background-image: url(/img/about/use-1.jpg);
+                            background-image: url(../img/about/use-1.jpg);
                             background-position: center;
                             background-size: cover;
                         }
@@ -364,7 +364,7 @@ body {
                             grid-column-start: 2;
                             grid-column-end: 3;
 
-                            background-image: url(/img/about/use-2.jpg);
+                            background-image: url(../img/about/use-2.jpg);
                             background-position: center;
                             background-size: cover;
                         }
@@ -374,7 +374,7 @@ body {
                             grid-column-start: 1;
                             grid-column-end: 3;
 
-                            background-image: url(/img/about/use-3.jpg);
+                            background-image: url(../img/about/use-3.jpg);
                             background-position: center;
                             background-size: cover;
                         }
@@ -404,7 +404,7 @@ body {
                     }
 
                     .img {
-                        background-image: url("/img/about/use-41.jpg");
+                        background-image: url("../img/about/use-41.jpg");
                         background-position: center;
                         background-size: cover;
                     }
@@ -426,7 +426,7 @@ body {
                         grid-column-start: 1;
                         grid-column-end: 10;
 
-                        background-image: url("/img/about/5.jpg");
+                        background-image: url("../img/about/5.jpg");
                         background-position: center;
                         background-size: cover;
                     }
@@ -577,35 +577,35 @@ body {
                         }
 
                         .newsSlide-1 {
-                            background-image: url("/img/new/2020_08_07.jpg");
+                            background-image: url("../img/new/2020_08_07.jpg");
                         }
 
                         .newsSlide-2 {
-                            background-image: url("/img/new/2020_05_07.jpg");
+                            background-image: url("../img/new/2020_05_07.jpg");
                         }
 
                         .newsSlide-3 {
-                            background-image: url("/img/new/2020_05_01.jpg");
+                            background-image: url("../img/new/2020_05_01.jpg");
                         }
 
                         .newsSlide-4 {
-                            background-image: url("/img/new/2020_04_19.jpg");
+                            background-image: url("../img/new/2020_04_19.jpg");
                         }
 
                         .newsSlide-5 {
-                            background-image: url("/img/new/2020_04_09.jpg");
+                            background-image: url("../img/new/2020_04_09.jpg");
                         }
 
                         .newsSlide-6 {
-                            background-image: url("/img/new/2020_03_20.jpg");
+                            background-image: url("../img/new/2020_03_20.jpg");
                         }
 
                         .newsSlide-7 {
-                            background-image: url("/img/new/2020_02_09.jpg");
+                            background-image: url("../img/new/2020_02_09.jpg");
                         }
 
                         .newsSlide-8 {
-                            background-image: url("/img/new/2020_02_05.jpg");
+                            background-image: url("../img/new/2020_02_05.jpg");
                         }
 
                         .swiper-button-next {
@@ -787,16 +787,16 @@ body {
                                 }
 
                                 .menuSlide-1 {
-                                    background-image: url("/img/menu/use-1.jpg");
+                                    background-image: url("../img/menu/use-1.jpg");
                                 }
                                 .menuSlide-2 {
-                                    background-image: url("/img/menu/use-2.jpg");
+                                    background-image: url("../img/menu/use-2.jpg");
                                 }
                                 .menuSlide-3 {
-                                    background-image: url("/img/menu/use-3.jpg");
+                                    background-image: url("../img/menu/use-3.jpg");
                                 }
                                 .menuSlide-4 {
-                                    background-image: url("/img/menu/use-4.jpg");
+                                    background-image: url("../img/menu/use-4.jpg");
                                 }
                             }
                         }
@@ -847,11 +847,11 @@ body {
                         }
 
                         .chargeImg-01 {
-                            background-image: url("/img/menu/use-5.jpg");
+                            background-image: url("../img/menu/use-5.jpg");
                         }
 
                         .chargeImg-02 {
-                            background-image: url("/img/menu/use-6.jpg");
+                            background-image: url("../img/menu/use-6.jpg");
                         }
                     }
                 }
@@ -905,16 +905,16 @@ body {
                                 }
 
                                 .shop01-1 {
-                                    background: url("/img/shopInfo/shop-01/1.jpg");
+                                    background: url("../img/shopInfo/shop-01/1.jpg");
                                 }
                                 .shop01-2 {
-                                    background: url("/img/shopInfo/shop-01/2.jpg");
+                                    background: url("../img/shopInfo/shop-01/2.jpg");
                                 }
                                 .shop01-3 {
-                                    background: url("/img/shopInfo/shop-01/3.jpg");
+                                    background: url("../img/shopInfo/shop-01/3.jpg");
                                 }
                                 .shop01-4 {
-                                    background: url("/img/shopInfo/shop-01/4.jpg");
+                                    background: url("../img/shopInfo/shop-01/4.jpg");
                                 }
                             }
                         }
