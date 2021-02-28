@@ -18,6 +18,8 @@ body {
         left: 0;
         top: 0;
 
+        background-color: #ffffff;
+
         transition: all 0.4s ease-in-out;
 
         .navOpener {
@@ -46,12 +48,9 @@ body {
 
                 user-select: none;
 
-                span:first-child {
-                    font-family: "Lora", "Noto Serif TC", serif;
-                }
-
                 span:last-child {
                     margin-top: 4px;
+                    font-family: "Roboto", "Roboto", sans-serif;
                 }
             }
 
@@ -86,7 +85,6 @@ body {
             .navCloser {
                 transform: rotate(180deg);
 
-                font-family: "Lora", "Noto Serif TC", serif;
                 font-weight: 500;
                 writing-mode: vertical-rl;
 
@@ -128,7 +126,6 @@ body {
                     display: flex;
 
                     h4 {
-                        font-family: "Lora", "Noto Serif TC", serif;
                         white-space: nowrap;
                         position: relative;
 
@@ -200,37 +197,46 @@ body {
         }
     }
 
-    #banner {
+    #banner-img {
         height: 100vh;
+        width: calc(100vw - #{$aside-close-with});
 
         margin-left: $aside-close-with;
 
-        position: relative;
+        position: fixed;
+        top: 0;
         left: 0;
+        z-index: -1;
 
         transition: all 0.4s ease-in-out;
 
-        #banner-point {
-            position: absolute;
-            top: 0;
-            left: -252px;
-        }
-
-        .mask {
+        .banner-swiper {
             width: 100%;
             height: 100%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            .swiper-slide {
+                height: 100vh;
+                width: 100%;
 
-            background-color: rgba(0, 0, 0, 0.2);
+                background-position: center;
+                background-size: cover;
+                .mask {
+                    height: 100vh;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.08);
+                }
+            }
 
-            .logo {
-                width: 20%;
-                min-width: 272px;
+            .banner-1 {
+                background-image: url(/img/banner/use-03.jpg);
+            }
 
-                fill: #ffffff;
+            .banner-2 {
+                background-image: url(/img/banner/use-02.jpg);
+            }
+
+            .banner-3 {
+                background-image: url(/img/banner/use-01.jpg);
             }
         }
     }
@@ -238,17 +244,18 @@ body {
     #container {
         margin-left: $aside-close-with;
 
+        box-sizing: border-box;
+
         position: relative;
+        top: 0;
         left: 0;
 
         transition: all 0.4s ease-in-out;
 
-        
-
         main {
             .content-s {
-                padding-left: 21%;
-                padding-right: 21%;
+                padding-left: 22%;
+                padding-right: 22%;
             }
 
             .content-m {
@@ -261,16 +268,47 @@ body {
                 padding-right: 6%;
             }
 
-            #about {
-                position: relative;
-                #about-point {
-                    height: 1;
-                    width: 1;
-                    background-color: black;
+            #banner {
+                height: 100vh;
 
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                #banner-point {
                     position: absolute;
                     top: 0;
-                    left: -252px;
+                    left: calc(#{$aside-open-with} * -1);
+                }
+
+                .logo {
+                    width: 20%;
+                    min-width: 272px;
+
+                    fill: #ffffff;
+                }
+
+                h6 {
+                    font-weight: 400;
+
+                    color: #ffffff;
+
+                    margin: $spacing-m 0;
+                    text-indent: 1.2rem;
+                    letter-spacing: 1em;
+                }
+            }
+
+            #about {
+                position: relative;
+
+                #about-point {
+                    position: absolute;
+                    top: 0;
+                    left: calc(#{$aside-open-with} * -1);
                 }
 
                 .story-1 {
@@ -280,19 +318,23 @@ body {
                     flex-direction: column;
                     align-items: center;
 
+                    background-color: #f3f0e9;
+
                     .text {
                         text-align: center;
+                        padding-left: 22%;
+                        padding-right: 22%;
 
-                        h6 {
-                            margin-bottom: $spacing-l;
+                        h2 {
+                            margin-bottom: 4px;
                         }
 
-                        h3 {
-                            padding-bottom: $spacing-s;
+                        h6 {
+                            margin-bottom: 36px;
                         }
 
                         h5 {
-                            margin-bottom: $spacing-xl;
+                            margin-bottom: 72px;
                         }
                     }
 
@@ -300,35 +342,39 @@ body {
                         width: 100%;
 
                         display: grid;
-                        grid-template-columns: repeat(21, 1fr);
-                        grid-column-gap: $spacing-l;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 24px;
 
                         .img {
-                            padding-bottom: 120%;
+                            border-radius: 4px;
                         }
-                        :first-child {
-                            grid-column-start: 1;
-                            grid-column-end: 9;
 
-                            background-image: url("https://picsum.photos/1920/1080");
+                        :first-child {
+                            padding-bottom: 48vh;
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+
+                            background-image: url(/img/about/use-1.jpg);
                             background-position: center;
                             background-size: cover;
                         }
 
                         :nth-child(2) {
-                            grid-column-start: 9;
-                            grid-column-end: 14;
+                            padding-bottom: 48vh;
+                            grid-column-start: 2;
+                            grid-column-end: 3;
 
-                            background-image: url("https://picsum.photos/1920/1080");
+                            background-image: url(/img/about/use-2.jpg);
                             background-position: center;
                             background-size: cover;
                         }
 
                         :last-child {
-                            grid-column-start: 14;
-                            grid-column-end: 22;
+                            padding-bottom: 48vh;
+                            grid-column-start: 1;
+                            grid-column-end: 3;
 
-                            background-image: url("https://picsum.photos/1920/1080");
+                            background-image: url(/img/about/use-3.jpg);
                             background-position: center;
                             background-size: cover;
                         }
@@ -339,7 +385,9 @@ body {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
 
-                    background-color: #eae3d7;
+                    background-color: #eeeae3;
+
+                    color: #2b2827;
 
                     .text {
                         padding: 33% 12%;
@@ -347,16 +395,16 @@ body {
                         text-align: center;
 
                         h3 {
-                            padding-bottom: $spacing-s;
+                            padding-bottom: 24px;
                         }
 
                         h5 {
-                            margin-bottom: $spacing-xl;
+                            margin-bottom: 36px;
                         }
                     }
 
                     .img {
-                        background-image: url("https://picsum.photos/1920/1080");
+                        background-image: url("/img/about/use-41.jpg");
                         background-position: center;
                         background-size: cover;
                     }
@@ -368,13 +416,17 @@ body {
                     display: grid;
                     grid-template-columns: repeat(21, 1fr);
 
-                    background-color: #c5b796;
+                    background-color: #e0d9cc;
+
+                    color: #1a1817;
 
                     .img {
+                        border-radius: 4px;
+
                         grid-column-start: 1;
                         grid-column-end: 10;
 
-                        background-image: url("https://picsum.photos/1920/1080");
+                        background-image: url("/img/about/5.jpg");
                         background-position: center;
                         background-size: cover;
                     }
@@ -387,12 +439,12 @@ body {
 
                         text-align: center;
 
-                        h6 {
-                            margin-bottom: $spacing-l;
+                        h3 {
+                            padding-bottom: 24px;
                         }
 
-                        h3 {
-                            padding-bottom: $spacing-s;
+                        h5 {
+                            margin-bottom: 36px;
                         }
                     }
                 }
@@ -407,12 +459,12 @@ body {
                 flex-direction: column;
                 align-items: center;
 
-                background-color: #eae3d7;
+                background-color: #3e3a39;
 
                 #newsLetter-point {
                     position: absolute;
                     top: 0;
-                    left: -252px;
+                    left: calc(#{$aside-open-with} * -1);
                 }
 
                 .text {
@@ -420,6 +472,11 @@ body {
                     flex-direction: column;
                     align-items: center;
                     margin-bottom: $spacing-l;
+                    color: #fff;
+
+                    h2 {
+                        margin-bottom: 4px;
+                    }
                 }
 
                 .swiper-button-container {
@@ -488,6 +545,7 @@ body {
 
                                 background: #ffffff;
 
+                                letter-spacing: 0.05em;
                                 .data {
                                     margin-bottom: $spacing-xs;
 
@@ -516,6 +574,38 @@ body {
                                     text-overflow: ellipsis;
                                 }
                             }
+                        }
+
+                        .newsSlide-1 {
+                            background-image: url("/img/new/2020_08_07.jpg");
+                        }
+
+                        .newsSlide-2 {
+                            background-image: url("/img/new/2020_05_07.jpg");
+                        }
+
+                        .newsSlide-3 {
+                            background-image: url("/img/new/2020_05_01.jpg");
+                        }
+
+                        .newsSlide-4 {
+                            background-image: url("/img/new/2020_04_19.jpg");
+                        }
+
+                        .newsSlide-5 {
+                            background-image: url("/img/new/2020_04_09.jpg");
+                        }
+
+                        .newsSlide-6 {
+                            background-image: url("/img/new/2020_03_20.jpg");
+                        }
+
+                        .newsSlide-7 {
+                            background-image: url("/img/new/2020_02_09.jpg");
+                        }
+
+                        .newsSlide-8 {
+                            background-image: url("/img/new/2020_02_05.jpg");
                         }
 
                         .swiper-button-next {
@@ -557,17 +647,17 @@ body {
                 #menu-point {
                     position: absolute;
                     top: 0;
-                    left: -252px;
+                    left: calc(#{$aside-open-with} * -1);
                 }
 
                 .menu {
                     @extend %block-space;
-                    background-color: #c5b796;
+                    background-color: #f3f0e9;
 
                     .wrapper {
                         height: 0;
                         width: 100%;
-                        padding-bottom: 48%;
+                        padding-bottom: 50%;
 
                         display: flex;
 
@@ -584,12 +674,17 @@ body {
                             top: 0;
 
                             .text {
-                                padding-right: $spacing-l;
+                                padding-right: 72px;
+                                padding-top: 16px;
 
                                 display: flex;
                                 flex-direction: column-reverse;
 
                                 writing-mode: vertical-lr;
+
+                                h2 {
+                                    text-indent: unset;
+                                }
                             }
 
                             .swiper-combine {
@@ -609,15 +704,45 @@ body {
                                         width: 100%;
 
                                         display: flex;
-                                        align-items: center;
-                                        justify-content: center;
+                                        align-items: flex-end;
+                                        justify-content: flex-end;
 
                                         font-size: 2rem;
                                         color: #ffffff;
 
-                                        background-image: url("https://picsum.photos/1920/1080");
                                         background-size: cover;
                                         background-position: center;
+
+                                        p {
+                                            border-radius: 4px;
+                                            box-sizing: border-box;
+
+                                            margin-right: 72px;
+                                            margin-bottom: 72px;
+
+                                            font-size: 1.4rem;
+                                            letter-spacing: 0.1em;
+                                            background-color: rgba(255, 255, 255, 0.25);
+                                            border: solid 1px #fff;
+                                            padding: 15px 35px 15px 35px;
+
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            transition: all 0.1s ease-in-out;
+                                            cursor: pointer;
+
+                                            :first-child {
+                                                font-size: 1.6rem;
+                                                margin-right: 4px;
+                                            }
+
+                                            &:hover {
+                                                color: #3e3a39;
+                                                background-color: #ffffff;
+                                            }
+                                        }
                                     }
                                 }
 
@@ -639,12 +764,12 @@ body {
                                         font-size: 2rem;
                                         color: #ffffff;
 
-                                        background-image: url("https://picsum.photos/1920/1080");
                                         background-size: cover;
                                         background-position: center;
 
                                         opacity: 0.4;
 
+                                        transition: all 0.1s ease-in-out;
                                         &:hover {
                                             opacity: 1;
                                             cursor: pointer;
@@ -660,6 +785,19 @@ body {
                                         }
                                     }
                                 }
+
+                                .menuSlide-1 {
+                                    background-image: url("/img/menu/use-1.jpg");
+                                }
+                                .menuSlide-2 {
+                                    background-image: url("/img/menu/use-2.jpg");
+                                }
+                                .menuSlide-3 {
+                                    background-image: url("/img/menu/use-3.jpg");
+                                }
+                                .menuSlide-4 {
+                                    background-image: url("/img/menu/use-4.jpg");
+                                }
                             }
                         }
                     }
@@ -671,16 +809,20 @@ body {
                     display: flex;
                     flex-direction: row-reverse;
 
-                    background-color: #eae3d7;
+                    background-color: #eeeae3;
 
                     .text {
-                        padding-left: $spacing-l;
+                        padding-top: 16px;
+                        padding-left: 72px;
 
                         display: flex;
                         flex-direction: column-reverse;
 
                         writing-mode: vertical-lr;
 
+                        h2 {
+                            text-indent: unset;
+                        }
                         h3 {
                             padding-right: $spacing-l;
 
@@ -695,14 +837,21 @@ body {
 
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
-                        grid-column-gap: $spacing-l;
+                        grid-column-gap: 36px;
 
                         .img {
-                            padding-bottom: 150%;
+                            padding-bottom: 128%;
 
-                            background-image: url("https://picsum.photos/1920/1080");
                             background-size: cover;
                             background-position: center;
+                        }
+
+                        .chargeImg-01 {
+                            background-image: url("/img/menu/use-5.jpg");
+                        }
+
+                        .chargeImg-02 {
+                            background-image: url("/img/menu/use-6.jpg");
                         }
                     }
                 }
@@ -717,7 +866,7 @@ body {
                 flex-direction: column;
                 align-items: center;
 
-                background-color: #c5b796;
+                background-color: #3e3a39;
 
                 #shopInfo-point {
                     position: absolute;
@@ -728,81 +877,132 @@ body {
                 .text {
                     text-align: center;
                     margin-bottom: $spacing-l;
+                    color: #ffffff;
                 }
 
                 .box {
                     width: 100%;
+                    
 
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    .shop {
+                        width: 100%;
+                        height: 570px;
 
-                    .data {
-                        padding: 20% 10;
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
 
-                        background-color: #eae3d7;
+                        .img {
+                            
+                            width: 50%;
+                            height: 100%;
+                            
+                            .swiper-container {
+                                width: 100%;
+                                height: 100%;
 
-                        h3 {
-                            padding-bottom: $spacing-l;
-                        }
+                                .swiper-slide {
+                                    background-position: center !important;
+                                    background-size: cover !important;
+                                }
 
-                        table {
-                            padding-bottom: $spacing-xl;
-                            tbody {
-                                font-size: 1.8rem;
-                                line-height: 2.6rem;
-
-                                tr {
-                                    box-sizing: border-box;
-
-                                    th {
-                                        padding-right: $spacing-xl;
-                                        text-align: right;
-                                        vertical-align: top;
-                                        white-space: nowrap;
-                                    }
-
-                                    td {
-                                        padding-bottom: $spacing-s;
-                                    }
+                                .shop01-1 {
+                                    background: url("/img/shopInfo/shop-01/1.jpg");
+                                }
+                                .shop01-2 {
+                                    background: url("/img/shopInfo/shop-01/2.jpg");
+                                }
+                                .shop01-3 {
+                                    background: url("/img/shopInfo/shop-01/3.jpg");
+                                }
+                                .shop01-4 {
+                                    background: url("/img/shopInfo/shop-01/4.jpg");
                                 }
                             }
                         }
 
-                        .btn-wrapper {
+                        .data-wrapper {
+                            width: 50%;
+                            padding: 12% 36px;
+                            box-sizing: border-box;
+
                             display: flex;
-                            padding-bottom: $spacing-l;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
 
-                            .btn {
-                                height: 4.2rem;
-                                width: 200px;
-                                border-radius: 4.2rem;
+                            background-color: #ffffff;
 
-                                font-size: 1.8rem;
-                                line-height: 4.2rem;
-
-                                background-color: ivory;
-                                text-align: center;
+                            h3 {
+                                padding-bottom: $spacing-l;
+                                font-weight: 700;
                             }
-                            :first-child {
-                                margin-right: $spacing-xl;
+
+                            .data {
+                                font-family: "Roboto", "Roboto", sans-serif;
+                                font-size: 1.8rem;
+                                line-height: 2.6rem;
+                                letter-spacing: 0.05em;
+                                width: 100%;
+                                padding-bottom: $spacing-xl;
+
+                                .tr {
+                                    display: flex;
+                                    padding-bottom: $spacing-s;
+                                    .th {
+                                        width: 20%;
+                                        min-width: 120px;
+
+                                        text-align: right;
+                                        white-space: nowrap;
+                                        font-weight: 700;
+                                    }
+                                    .td {
+                                        padding-left: 36px;
+                                        word-break: break-all;
+                                    }
+                                }
+                            }
+
+                            .btn-wrapper {
+                                display: flex;
+                                padding-bottom: $spacing-l;
+                                font-family: "Roboto", "Roboto", sans-serif;
+                                .btn {
+                                    border-radius: 4.2rem;
+                                    padding: 15px 35px 15px 35px;
+                                    font-weight: 700;
+                                    font-size: 1.8rem;
+
+                                    text-align: center;
+                                }
+
+                                .booking {
+                                    background-color: #b81c22;
+                                    color: #ffffff;
+                                    margin-right: $spacing-xl;
+                                }
+
+                                .uber {
+                                    background-color: #000000;
+                                    color: #ffffff;
+
+                                    span {
+                                        color: #5fb709;
+                                    }
+                                }
                             }
                         }
                     }
 
-                    .img {
-                        background-image: url("https://picsum.photos/1920/1080");
-                        background-size: cover;
-                        background-position: center;
+                    .shop:first-child {
+                        flex-direction: row-reverse;
                     }
                 }
             }
 
             #contact {
                 @extend %block-space;
+
+                background-color: #f3f0e9;
 
                 display: flex;
                 flex-direction: column;
@@ -813,7 +1013,7 @@ body {
                 #contact-point {
                     position: absolute;
                     top: 0;
-                    left: -252px;
+                    left: calc(#{$aside-open-with} * -1);
                 }
 
                 .text {
@@ -850,7 +1050,6 @@ body {
 
                     .contact-container {
                         width: 100%;
-
                         .contact {
                             width: 100%;
                             padding: $spacing-l;
@@ -1037,10 +1236,10 @@ body.nav-open {
             opacity: 1;
         }
     }
-
-    #banner {
+    #banner-img {
         left: calc(#{$aside-open-with} - #{$aside-close-with});
     }
+
     #container {
         left: calc(#{$aside-open-with} - #{$aside-close-with});
     }

@@ -9,6 +9,12 @@ $spacing-2xl: 160px; //主題間距
 $aside-close-with: 48px;
 $aside-open-with: 256px;
 
+//主題間距
+%block-space {
+    padding-top: $spacing-2xl;
+    padding-bottom: $spacing-2xl;
+}
+
 //z-index
 // 用法 : z-index: z("modal", "close"); z-index: z("goku");
 $z-layers: (

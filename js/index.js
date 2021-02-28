@@ -53,9 +53,20 @@ window.onscroll = function () {
 }
 
 // Swiper
+var bannerSwiper = new Swiper('.banner-swiper', {
+    direction: 'vertical',
+    autoHeight: true,
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 4000,
+    },
+});
 
-
-var swiper = new Swiper('.swiper-container1', {   // newsLetter
+var newsLetterSwiper = new Swiper('.newsLetter-swiper', {
     slidesPerView: 3,
     spaceBetween: 36,
     loop: true,
@@ -91,6 +102,17 @@ var galleryTop = new Swiper('.gallery-top', {
 });
 
 
+
+var shopSwiper01 = new Swiper('.shopSwiper-01', {
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    loop: true,
+    autoplay: {
+        delay: 4000,
+    },
+});
 // img>svg 直接css改顏色
 
 jQuery('img.svg').each(function () {
