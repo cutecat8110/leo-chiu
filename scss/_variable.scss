@@ -6,14 +6,23 @@ $spacing-l: 36px;
 $spacing-xl: 72px;
 $spacing-2xl: 160px; //主題間距
 
-$aside-close-with: 48px;
-$aside-open-with: 256px;
+$asideWith-close: 48px;
+$asideWith-open: 256px;
 
 //主題間距
 %block-space {
     padding-top: $spacing-2xl;
     padding-bottom: $spacing-2xl;
 }
+
+
+//顏色
+$mainColor-1:#f3f0e9;
+$mainColor-2:#eeeae3;
+$mainColor-3:#e0d9cc;
+$mainColor-4:#3e3a39;
+$subColor-1:#e0e0e0;
+$subColor-2:#f5f5f5;
 
 //z-index
 // 用法 : z-index: z("modal", "close"); z-index: z("goku");

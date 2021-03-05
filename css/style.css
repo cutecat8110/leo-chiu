@@ -1,8 +1,3 @@
-body #container main #about .story-1, body #container main #about .story-3, body #container main #newsLetter, body #container main #menu .menu, body #container main #menu .charge, body #container main #shopInfo, body #container main #contact {
-  padding-top: 160px;
-  padding-bottom: 160px;
-}
-
 /* reset */
 * {
   -webkit-box-sizing: border-box;
@@ -85,14 +80,12 @@ html {
 }
 
 body {
-  width: 100vw;
   overflow-x: hidden;
-  position: relative;
 }
 
 body aside {
-  height: 100vh;
   width: 48px;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
@@ -104,10 +97,10 @@ body aside {
 body aside .navOpener {
   width: 48px;
   height: 100%;
-  padding: 16px;
   position: absolute;
   top: 0;
   right: 0;
+  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,13 +119,12 @@ body aside .navOpener {
 body aside .navOpener .openTime {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-indent: 0.05em;
-  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -145,8 +137,8 @@ body aside .navOpener .openTime span:last-child {
 }
 
 body aside .navOpener .humburger {
-  height: 36px;
   width: 16px;
+  height: 36px;
   position: absolute;
   top: 50%;
   right: 16px;
@@ -155,10 +147,6 @@ body aside .navOpener .humburger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: stretch;
-          flex-direction: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -172,6 +160,7 @@ body aside .navOpener .humburger:hover {
 
 body aside .navOpener .humburger span {
   width: 4px;
+  height: 100%;
   display: inline-block;
   background-color: #3e3a39;
 }
@@ -183,9 +172,9 @@ body aside .navOpener .navCloser {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  opacity: 0;
   -webkit-transition: all 0.2s 0.2s ease-in-out;
   transition: all 0.2s 0.2s ease-in-out;
+  opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -216,10 +205,9 @@ body aside nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -234,8 +222,8 @@ body aside nav ul li {
 }
 
 body aside nav ul li h4 {
-  white-space: nowrap;
   position: relative;
+  white-space: nowrap;
 }
 
 body aside nav ul li h4 i {
@@ -244,14 +232,18 @@ body aside nav ul li h4 i {
 
 body aside nav ul li h4::after {
   content: "";
+  width: 0%;
+  height: 1px;
   position: absolute;
   top: 50%;
   left: 0;
-  width: 0%;
-  height: 1px;
-  background: #3e3a39;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  background-color: #212121;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+body aside nav ul li:last-child {
+  margin-bottom: 36px;
 }
 
 body aside nav.banner-point .banner-point::after {
@@ -280,7 +272,7 @@ body aside nav.contact-point .contact-point::after {
 
 body #banner-img {
   height: 100vh;
-  width: calc(100vw - 48px);
+  width: 100%;
   margin-left: 48px;
   position: fixed;
   top: 0;
@@ -290,43 +282,47 @@ body #banner-img {
   transition: all 0.4s ease-in-out;
 }
 
-body #banner-img .banner-swiper {
+body #banner-img .swiper-container {
   width: 100%;
   height: 100%;
 }
 
-body #banner-img .banner-swiper .swiper-slide {
-  height: 100vh;
-  width: 100%;
+body #banner-img .swiper-container .swiper-slide {
+  position: relative;
   background-position: center;
   background-size: cover;
 }
 
-body #banner-img .banner-swiper .swiper-slide .mask {
-  height: 100vh;
+body #banner-img .swiper-container .swiper-slide::after {
+  content: "";
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.08);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-body #banner-img .banner-swiper .banner-1 {
+body #banner-img .swiper-container .banner-1 {
   background-image: url(../img/banner/use-03.jpg);
 }
 
-body #banner-img .banner-swiper .banner-2 {
+body #banner-img .swiper-container .banner-2 {
   background-image: url(../img/banner/use-02.jpg);
 }
 
-body #banner-img .banner-swiper .banner-3 {
+body #banner-img .swiper-container .banner-3 {
   background-image: url(../img/banner/use-01.jpg);
 }
 
 body #container {
-  margin-left: 48px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
   top: 0;
   left: 0;
+  margin-left: 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -377,11 +373,11 @@ body #container main #banner .logo {
 }
 
 body #container main #banner h6 {
-  font-weight: 400;
-  color: #ffffff;
   margin: 24px 0;
-  text-indent: 1.2rem;
+  font-weight: 400;
   letter-spacing: 1em;
+  text-indent: 1em;
+  color: #ffffff;
 }
 
 body #container main #about {
@@ -395,6 +391,7 @@ body #container main #about #about-point {
 }
 
 body #container main #about .story-1 {
+  padding: 160px 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,9 +406,8 @@ body #container main #about .story-1 {
 }
 
 body #container main #about .story-1 .text {
+  padding: 0 22%;
   text-align: center;
-  padding-left: 22%;
-  padding-right: 22%;
 }
 
 body #container main #about .story-1 .text h2 {
@@ -436,37 +432,31 @@ body #container main #about .story-1 .img-wrapper {
 }
 
 body #container main #about .story-1 .img-wrapper .img {
-  border-radius: 4px;
+  background-position: center;
+  background-size: cover;
 }
 
 body #container main #about .story-1 .img-wrapper :first-child {
-  padding-bottom: 48vh;
+  padding-bottom: calc(100% + 12px);
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
   background-image: url(../img/about/use-1.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 body #container main #about .story-1 .img-wrapper :nth-child(2) {
-  padding-bottom: 48vh;
   -ms-grid-column: 2;
       grid-column-start: 2;
   grid-column-end: 3;
   background-image: url(../img/about/use-2.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 body #container main #about .story-1 .img-wrapper :last-child {
-  padding-bottom: 48vh;
+  padding-bottom: 50%;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
   background-image: url(../img/about/use-3.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 body #container main #about .story-2 {
@@ -475,7 +465,6 @@ body #container main #about .story-2 {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   background-color: #eeeae3;
-  color: #2b2827;
 }
 
 body #container main #about .story-2 .text {
@@ -484,7 +473,7 @@ body #container main #about .story-2 .text {
 }
 
 body #container main #about .story-2 .text h3 {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 body #container main #about .story-2 .text h5 {
@@ -498,34 +487,34 @@ body #container main #about .story-2 .img {
 }
 
 body #container main #about .story-3 {
+  padding: 160px 14%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[21];
-      grid-template-columns: repeat(21, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   background-color: #e0d9cc;
-  color: #1a1817;
+  gap: 12%;
 }
 
 body #container main #about .story-3 .img {
-  border-radius: 4px;
   -ms-grid-column: 1;
       grid-column-start: 1;
-  grid-column-end: 10;
+  grid-column-end: 2;
   background-image: url("../img/about/5.jpg");
   background-position: center;
   background-size: cover;
 }
 
 body #container main #about .story-3 .text {
-  -ms-grid-column: 13;
-      grid-column-start: 13;
-  grid-column-end: 22;
-  padding: 33% 0%;
+  padding: 33% 0;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
   text-align: center;
 }
 
 body #container main #about .story-3 .text h3 {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 body #container main #about .story-3 .text h5 {
@@ -534,6 +523,7 @@ body #container main #about .story-3 .text h5 {
 
 body #container main #newsLetter {
   position: relative;
+  padding: 160px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,6 +544,7 @@ body #container main #newsLetter #newsLetter-point {
 }
 
 body #container main #newsLetter .text {
+  margin-bottom: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,7 +555,6 @@ body #container main #newsLetter .text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 36px;
   color: #fff;
 }
 
@@ -572,12 +562,13 @@ body #container main #newsLetter .text h2 {
   margin-bottom: 4px;
 }
 
-body #container main #newsLetter .swiper-button-container {
+body #container main #newsLetter .swiperButton-point {
   width: 100%;
   position: relative;
+  padding: 0 6%;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container {
+body #container main #newsLetter .swiperButton-point .swiper-container {
   height: 100%;
   width: 100%;
   position: static;
@@ -587,22 +578,24 @@ body #container main #newsLetter .swiper-button-container .swiper-container {
           user-select: none;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide {
   position: relative;
-  background-image: url("https://picsum.photos/1920/1080");
   background-position: center;
   background-size: cover;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide::after {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide::after {
   content: "";
   padding-bottom: 100%;
   display: block;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .more {
-  height: 100%;
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .more {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,36 +605,35 @@ body #container main #newsLetter .swiper-button-container .swiper-container .swi
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-indent: 0.05em;
   color: #ffffff;
   background-color: rgba(170, 190, 203, 0.8);
-  opacity: 0;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-}
-
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .more:hover {
-  opacity: 1;
+  opacity: 0;
   cursor: pointer;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .more:hover {
+  opacity: 1;
+}
+
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block {
   max-width: 66%;
-  padding: 16px;
-  overflow: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
+  padding: 16px;
+  overflow: hidden;
   font-size: 1.4rem;
+  letter-spacing: 0.05em;
   white-space: nowrap;
   background: #ffffff;
-  letter-spacing: 0.05em;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block .data {
   margin-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -651,79 +643,84 @@ body #container main #newsLetter .swiper-button-container .swiper-container .swi
           align-items: center;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data .tag {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block .data .tag {
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .data .line {
-  height: 1.4rem;
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block .data .line {
   width: 1px;
+  height: 1.4rem;
   margin: 0 8px;
   display: block;
-  background-color: #000000;
+  background-color: #3e3a39;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-slide .block .title {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block .data .time {
+  font-family: "Roboto", "Roboto", sans-serif;
+}
+
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-slide .block .title {
   overflow: hidden;
+  font-family: "Roboto", "Roboto", sans-serif;
   text-overflow: ellipsis;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-1 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-1 {
   background-image: url("../img/new/2020_08_07.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-2 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-2 {
   background-image: url("../img/new/2020_05_07.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-3 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-3 {
   background-image: url("../img/new/2020_05_01.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-4 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-4 {
   background-image: url("../img/new/2020_04_19.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-5 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-5 {
   background-image: url("../img/new/2020_04_09.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-6 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-6 {
   background-image: url("../img/new/2020_03_20.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-7 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-7 {
   background-image: url("../img/new/2020_02_09.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .newsSlide-8 {
+body #container main #newsLetter .swiperButton-point .swiper-container .newsSlide-8 {
   background-image: url("../img/new/2020_02_05.jpg");
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-next {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-button-next {
   right: auto;
   left: 95%;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-next::after {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-button-next::after {
   content: "";
-  height: 0;
   width: 0;
+  height: 0;
   border-style: solid;
   border-width: 10px 0 10px 16px;
   border-color: transparent transparent transparent #aabecb;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-prev {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-button-prev {
   right: 95%;
   left: auto;
 }
 
-body #container main #newsLetter .swiper-button-container .swiper-container .swiper-button-prev::after {
+body #container main #newsLetter .swiperButton-point .swiper-container .swiper-button-prev::after {
   content: "";
-  height: 0;
   width: 0;
+  height: 0;
   border-style: solid;
   border-width: 10px 16px 10px 0;
   border-color: transparent #aabecb transparent transparent;
@@ -739,34 +736,20 @@ body #container main #menu #menu-point {
   left: calc(256px * -1);
 }
 
-body #container main #menu .menu {
+body #container main #menu .menu-container {
+  padding: 160px 14%;
   background-color: #f3f0e9;
 }
 
-body #container main #menu .menu .wrapper {
-  height: 0;
-  width: 100%;
-  padding-bottom: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-body #container main #menu .menu .wrapper .boxes {
-  height: 100%;
+body #container main #menu .menu-container .menu-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
-body #container main #menu .menu .wrapper .boxes .text {
-  padding-right: 72px;
-  padding-top: 16px;
+body #container main #menu .menu-container .menu-wrapper .text {
+  margin: 16px 72px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,90 +762,121 @@ body #container main #menu .menu .wrapper .boxes .text {
           writing-mode: vertical-lr;
 }
 
-body #container main #menu .menu .wrapper .boxes .text h2 {
+body #container main #menu .menu-container .menu-wrapper .text h2 {
   text-indent: unset;
+  margin-left: 4px;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point {
   width: 100%;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-top {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menu-swiper {
   width: 100%;
+  height: 100%;
   -ms-grid-column: 1;
       grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-top .swiper-slide {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 2rem;
-  color: #ffffff;
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menu-swiper .swiper-slide {
+  position: relative;
   background-size: cover;
   background-position: center;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-top .swiper-slide p {
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-right: 72px;
-  margin-bottom: 72px;
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  background-color: rgba(255, 255, 255, 0.25);
-  border: solid 1px #fff;
-  padding: 15px 35px 15px 35px;
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menu-swiper .swiper-slide p {
+  position: absolute;
+  right: 72px;
+  bottom: 72px;
+  padding: 15px 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: solid 1px #fff;
+  border-radius: 4px;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-top .swiper-slide p :first-child {
-  font-size: 1.6rem;
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menu-swiper .swiper-slide p :first-child {
   margin-right: 4px;
+  font-size: 1.6rem;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-top .swiper-slide p:hover {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menu-swiper .swiper-slide p:hover {
   color: #3e3a39;
   background-color: #ffffff;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper {
   width: 100%;
+  height: 100%;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 16px;
-  -ms-grid-column: 5;
-      grid-column-start: 5;
-  grid-column-end: 6;
+  margin-left: 16px;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs .swiper-slide {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide:hover .mask {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: rgba(170, 190, 203, 0.8);
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide .mask {
   width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.45);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 1;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide p {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -872,46 +886,50 @@ body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
   color: #ffffff;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-}
-
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs .swiper-slide:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .gallery-thumbs .swiper-slide-thumb-active:hover {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide-thumb-active:hover .mask {
   opacity: 1;
-  cursor: default;
+  background-color: rgba(170, 190, 203, 0.8);
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-1 {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide-thumb-active:hover p {
+  opacity: 1;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide-thumb-active .mask {
+  opacity: 0;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .subMenu-swiper .swiper-slide-thumb-active p {
+  opacity: 0;
+}
+
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menuSlide-1 {
   background-image: url("../img/menu/use-1.jpg");
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-2 {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menuSlide-2 {
   background-image: url("../img/menu/use-2.jpg");
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-3 {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menuSlide-3 {
   background-image: url("../img/menu/use-3.jpg");
 }
 
-body #container main #menu .menu .wrapper .boxes .swiper-combine .menuSlide-4 {
+body #container main #menu .menu-container .menu-wrapper .menuSwiper-point .menuSwiper-container .menuSwiper-wrapper .menuSlide-4 {
   background-image: url("../img/menu/use-4.jpg");
 }
 
 body #container main #menu .charge {
+  padding: 160px 14%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,8 +941,7 @@ body #container main #menu .charge {
 }
 
 body #container main #menu .charge .text {
-  padding-top: 16px;
-  padding-left: 72px;
+  margin: 16px 0 0 72px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,16 +956,21 @@ body #container main #menu .charge .text {
 
 body #container main #menu .charge .text h2 {
   text-indent: unset;
-}
-
-body #container main #menu .charge .text h3 {
-  padding-right: 36px;
+  margin: 0 4px 0 36px;
 }
 
 body #container main #menu .charge .text h3 span {
   -webkit-writing-mode: horizontal-tb;
       -ms-writing-mode: lr-tb;
           writing-mode: horizontal-tb;
+}
+
+body #container main #menu .charge .text h5 {
+  margin-left: 24px;
+}
+
+body #container main #menu .charge .text :last-child {
+  margin-left: unset;
 }
 
 body #container main #menu .charge .img-wrapper {
@@ -961,7 +983,7 @@ body #container main #menu .charge .img-wrapper {
 }
 
 body #container main #menu .charge .img-wrapper .img {
-  padding-bottom: 128%;
+  padding-bottom: 133.33%;
   background-size: cover;
   background-position: center;
 }
@@ -975,6 +997,7 @@ body #container main #menu .charge .img-wrapper .chargeImg-02 {
 }
 
 body #container main #shopInfo {
+  padding: 160px 14%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -996,59 +1019,7 @@ body #container main #shopInfo #shopInfo-point {
 }
 
 body #container main #shopInfo .text {
-  text-align: center;
   margin-bottom: 36px;
-  color: #ffffff;
-}
-
-body #container main #shopInfo .box {
-  width: 100%;
-}
-
-body #container main #shopInfo .box .shop {
-  width: 100%;
-  height: 570px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #container main #shopInfo .box .shop .img {
-  width: 50%;
-  height: 100%;
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container .swiper-slide {
-  background-position: center !important;
-  background-size: cover !important;
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container .shop01-1 {
-  background: url("../img/shopInfo/shop-01/1.jpg");
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container .shop01-2 {
-  background: url("../img/shopInfo/shop-01/2.jpg");
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container .shop01-3 {
-  background: url("../img/shopInfo/shop-01/3.jpg");
-}
-
-body #container main #shopInfo .box .shop .img .swiper-container .shop01-4 {
-  background: url("../img/shopInfo/shop-01/4.jpg");
-}
-
-body #container main #shopInfo .box .shop .data-wrapper {
-  width: 50%;
-  padding: 12% 36px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1059,78 +1030,184 @@ body #container main #shopInfo .box .shop .data-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  color: #fff;
+}
+
+body #container main #shopInfo .text h2 {
+  margin-bottom: 4px;
+}
+
+body #container main #shopInfo .shopInfo-container {
+  width: 100%;
+}
+
+body #container main #shopInfo .shopInfo-container .shop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img {
+  position: relative;
+  width: 50%;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .swiper-slide {
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop01-1 {
+  background: url("../img/shopInfo/shop-01/use-1.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop01-2 {
+  background: url("../img/shopInfo/shop-01/use-2.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop01-3 {
+  background: url("../img/shopInfo/shop-01/use-3.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop02-1 {
+  background: url("../img/shopInfo/shop-02/use-1.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop02-2 {
+  background: url("../img/shopInfo/shop-02/use-2.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .img .swiper-container .shop02-3 {
+  background: url("../img/shopInfo/shop-02/use-3.jpg");
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container {
+  width: 50%;
+  padding: 0 36px;
   background-color: #ffffff;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper h3 {
-  padding-bottom: 36px;
-  font-weight: 700;
-}
-
-body #container main #shopInfo .box .shop .data-wrapper .data {
-  font-family: "Roboto", "Roboto", sans-serif;
-  font-size: 1.8rem;
-  line-height: 2.6rem;
-  letter-spacing: 0.05em;
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper {
   width: 100%;
-  padding-bottom: 72px;
-}
-
-body #container main #shopInfo .box .shop .data-wrapper .data .tr {
+  padding: 20% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .data .tr .th {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper h3 {
+  margin-bottom: 36px;
+  font-weight: 700;
+  text-indent: 0.05em;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul {
+  width: 100%;
+  margin-bottom: 72px;
+  font-size: 1.8rem;
+  font-family: "Roboto", "Roboto", sans-serif;
+  line-height: 2.6rem;
+  letter-spacing: 0.05em;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul li {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul li .title {
   width: 20%;
-  min-width: 120px;
+  min-width: 112px;
+  font-weight: 700;
   text-align: right;
   white-space: nowrap;
-  font-weight: 700;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .data .tr .td {
-  padding-left: 36px;
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul li .content {
+  margin-left: 36px;
   word-break: break-all;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .btn-wrapper {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul li a {
+  text-decoration: underline;
+  color: #c03d20;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul li a i {
+  margin-left: 4px;
+  font-size: 1.6rem;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper ul :last-child {
+  margin-bottom: unset;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper {
+  width: 100%;
+  padding-bottom: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 36px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-family: "Roboto", "Roboto", sans-serif;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .btn-wrapper .btn {
-  border-radius: 4.2rem;
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .btn {
   padding: 15px 35px 15px 35px;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  border-radius: 4.2rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .btn-wrapper .booking {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .booking {
+  color: #ffffff;
   background-color: #b81c22;
-  color: #ffffff;
-  margin-right: 72px;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .btn-wrapper .uber {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .booking:hover {
+  background-color: #c92a30;
+}
+
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .uber {
+  color: #ffffff;
   background-color: #000000;
-  color: #ffffff;
 }
 
-body #container main #shopInfo .box .shop .data-wrapper .btn-wrapper .uber span {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .uber span {
   color: #5fb709;
 }
 
-body #container main #shopInfo .box .shop:first-child {
+body #container main #shopInfo .shopInfo-container .shop .data-container .data-wrapper .btn-wrapper .uber:hover {
+  background-color: #333333;
+}
+
+body #container main #shopInfo .shopInfo-container .shop:first-child {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -1138,7 +1215,8 @@ body #container main #shopInfo .box .shop:first-child {
 }
 
 body #container main #contact {
-  background-color: #f3f0e9;
+  padding: 160px 22%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1149,7 +1227,7 @@ body #container main #contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  background-color: #f3f0e9;
 }
 
 body #container main #contact #contact-point {
@@ -1163,7 +1241,11 @@ body #container main #contact .text {
   margin-bottom: 36px;
 }
 
-body #container main #contact .contact-wapper {
+body #container main #contact .text h2 {
+  margin-bottom: 4px;
+}
+
+body #container main #contact .contact-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1172,37 +1254,41 @@ body #container main #contact .contact-wapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: 1.8rem;
+  font-family: "Roboto", "Roboto", sans-serif;
+  line-height: 2.6rem;
+  letter-spacing: 0.05em;
   background-color: #f5f5f5;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-body #container main #contact .contact-wapper .btn-group {
+body #container main #contact .contact-container .option-wapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 700;
 }
 
-body #container main #contact .contact-wapper .btn-group .btn {
+body #container main #contact .contact-container .option-wapper .option {
   width: 50%;
-  padding: 12px 0;
+  padding: 16px 36px;
   text-align: center;
   background-color: #e0e0e0;
 }
 
-body #container main #contact .contact-wapper .btn-group .btn.active {
+body #container main #contact .contact-container .option-wapper .option.active {
   background-color: #f5f5f5;
 }
 
-body #container main #contact .contact-wapper .contact-container {
+body #container main #contact .contact-container .contact-wapper {
   width: 100%;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact {
+body #container main #contact .contact-container .contact-wapper .contact {
   width: 100%;
-  padding: 36px;
+  padding: 0 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1210,112 +1296,143 @@ body #container main #contact .contact-wapper .contact-container .contact {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact .remark {
+  width: 100%;
+  padding: 36px 52px;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact .remark p:first-child {
+  margin-bottom: 16px;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact .line {
+  width: 100%;
+  height: 1px;
+  background-color: #3e3a39;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact ul {
+  padding: 36px 72px;
+  width: 100%;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact ul li {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact ul li .title {
+  width: 20%;
+  min-width: 152px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .remark {
-  padding: 56px;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap {
-  padding: 72px 0;
-  width: 100%;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl {
-  width: 100%;
-  display: table;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dt {
-  width: 23.48%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: right;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd {
-  width: 76.52%;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd .selectWrap {
-  width: 100%;
-  position: relative;
+body #container main #contact .contact-container .contact-wapper .contact ul li .content {
+  width: 80%;
+  margin-left: 36px;
+  padding: 10px;
   background-color: #f1eee8;
+  border: none;
+  border-radius: 4px;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd .selectWrap::before {
-  width: 30px;
-  height: 37px;
+body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap {
+  width: 80%;
+  margin-left: 36px;
+  position: relative;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap select {
+  width: 100%;
+  padding: 10px;
+  background-color: #f1eee8;
+  border: none;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 1;
+}
+
+body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap::before {
   content: "";
-  background-color: #cec9be;
-  display: inline-block;
+  width: 40px;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 0;
+  display: inline-block;
+  background-color: #cec9be;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd .selectWrap::after {
+body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap::after {
+  content: "";
   width: 0;
   height: 0;
-  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16.5px;
+  z-index: 0;
+  margin-top: -2px;
   display: inline-block;
   border-top: 4px solid #fff;
   border-right: 3.5px solid transparent;
   border-bottom: 0px solid transparent;
   border-left: 3.5px solid transparent;
-  position: absolute;
-  top: 50%;
-  right: 11.5px;
-  margin-top: -2px;
-  z-index: 0;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd .selectWrap select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  height: 37px;
-  padding: 0 40px 0 10px;
-  background-color: transparent;
-  border: none;
-  font-size: 13px;
-  line-height: 1;
-  position: relative;
-  z-index: 1;
+body #container main #contact .contact-container .contact-wapper .contact .check-btn {
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto 36px;
+  padding: 15px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  background-color: #f5f5f5;
+  border: 1px solid #3e3a39;
+  border-radius: 4px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd input {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  border: none;
-  background-color: #f1eee8;
-  border-radius: 0;
+body #container main #contact .contact-container .contact-wapper .contact .check-btn :first-child {
+  margin-right: 4px;
+  font-size: 1.6rem;
 }
 
-body #container main #contact .contact-wapper .contact-container .contact .contactWrap dl dd textarea {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  border: none;
-  background-color: #f1eee8;
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  border-radius: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body #container main #contact .contact-wapper .contact-container .contact .check-btn {
-  padding: 0 72px;
-  border: 1px solid #000000;
+body #container main #contact .contact-container .contact-wapper .contact .check-btn:hover {
+  color: #ffffff;
+  background-color: #3e3a39;
 }
 
 body #container footer {
@@ -1405,9 +1522,8 @@ body.nav-open aside .navCloser:hover {
 }
 
 body.nav-open aside nav {
-  -webkit-transition: all 0.2s 0.2s ease-in-out;
-  transition: all 0.2s 0.2s ease-in-out;
-  visibility: visible;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 

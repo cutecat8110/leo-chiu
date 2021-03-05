@@ -54,17 +54,15 @@ window.onscroll = function () {
 
 // Swiper
 var bannerSwiper = new Swiper('.banner-swiper', {
-    direction: 'vertical',
-    autoHeight: true,
     loop: true,
     effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
+
     autoplay: {
-        delay: 4000,
+        delay: 4500,
     },
 });
+
+
 
 var newsLetterSwiper = new Swiper('.newsLetter-swiper', {
     slidesPerView: 3,
@@ -79,7 +77,8 @@ var newsLetterSwiper = new Swiper('.newsLetter-swiper', {
 
 
 
-var galleryThumbs = new Swiper('.gallery-thumbs', {
+
+var submenuSwiper = new Swiper('.subMenu-swiper', {
     direction: 'vertical',
     spaceBetween: 16,
     slidesPerView: 4,
@@ -87,32 +86,39 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
 });
-
-var galleryTop = new Swiper('.gallery-top', {
+var menuSwiper = new Swiper('.menu-swiper', {
     direction: 'vertical',
-    spaceBetween: 16,
-
     loop: true,
     autoplay: {
-        delay: 4000,
+        delay: 4500,
     },
     thumbs: {
-        swiper: galleryThumbs
+        swiper: submenuSwiper
     }
 });
 
 
 
+
 var shopSwiper01 = new Swiper('.shopSwiper-01', {
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
     loop: true,
+    effect: 'fade',
+
     autoplay: {
-        delay: 4000,
+        delay: 4500,
     },
 });
+
+
+var shopSwiper02 = new Swiper('.shopSwiper-02', {
+    loop: true,
+    effect: 'fade',
+
+    autoplay: {
+        delay: 4500,
+    },
+});
+
 // img>svg 直接css改顏色
 
 jQuery('img.svg').each(function () {
