@@ -119,6 +119,31 @@ var shopSwiper02 = new Swiper('.shopSwiper-02', {
     },
 });
 
+
+//FAQ
+
+$('.option').click(
+    function () {
+        $('.option,.contact-content').removeClass("active")
+        $(this).addClass("active")
+        $('.contact-content').eq($(this).index()).addClass("active")
+    }
+)
+
+
+
+$(".faqCate").click(function () {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass("active")
+        $(this).children(".fa-caret-up").removeClass("fa-caret-up").addClass("fa-caret-down")
+        $(this).next().slideUp( 300)
+    } else {
+        $(this).addClass("active")
+        $(this).children(".fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-up")
+        $(this).next().slideDown( 450 )
+    }
+})
+
 // img>svg 直接css改顏色
 
 jQuery('img.svg').each(function () {
@@ -153,4 +178,4 @@ jQuery('img.svg').each(function () {
 
     }, 'xml');
 
-});  
+});

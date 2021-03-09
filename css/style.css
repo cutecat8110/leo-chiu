@@ -272,7 +272,7 @@ body aside nav.contact-point .contact-point::after {
 
 body #banner-img {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   margin-left: 48px;
   position: fixed;
   top: 0;
@@ -317,7 +317,6 @@ body #banner-img .swiper-container .banner-3 {
 }
 
 body #container {
-  width: 100%;
   position: relative;
   top: 0;
   left: 0;
@@ -1264,7 +1263,7 @@ body #container main #contact .contact-container {
   overflow: hidden;
 }
 
-body #container main #contact .contact-container .option-wapper {
+body #container main #contact .contact-container .option-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1272,22 +1271,23 @@ body #container main #contact .contact-container .option-wapper {
   font-weight: 700;
 }
 
-body #container main #contact .contact-container .option-wapper .option {
+body #container main #contact .contact-container .option-wrapper .option {
   width: 50%;
   padding: 16px 36px;
   text-align: center;
   background-color: #e0e0e0;
+  cursor: pointer;
 }
 
-body #container main #contact .contact-container .option-wapper .option.active {
+body #container main #contact .contact-container .option-wrapper .option.active {
   background-color: #f5f5f5;
 }
 
-body #container main #contact .contact-container .contact-wapper {
+body #container main #contact .contact-container .contact-wrapper {
   width: 100%;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact {
+body #container main #contact .contact-container .contact-wrapper .contact-content {
   width: 100%;
   padding: 0 36px;
   display: -webkit-box;
@@ -1299,34 +1299,35 @@ body #container main #contact .contact-container .contact-wapper .contact {
           flex-direction: column;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .remark {
+body #container main #contact .contact-container .contact-wrapper .contact-content .remark {
   width: 100%;
   padding: 36px 52px;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .remark p:first-child {
+body #container main #contact .contact-container .contact-wrapper .contact-content .remark span {
+  display: block;
   margin-bottom: 16px;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .line {
+body #container main #contact .contact-container .contact-wrapper .contact-content .line {
   width: 100%;
   height: 1px;
   background-color: #3e3a39;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul {
   padding: 36px 72px;
   width: 100%;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li {
   margin-bottom: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .title {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .title {
   width: 20%;
   min-width: 152px;
   display: -webkit-box;
@@ -1342,7 +1343,7 @@ body #container main #contact .contact-container .contact-wapper .contact ul li 
   white-space: nowrap;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .content {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .content {
   width: 80%;
   margin-left: 36px;
   padding: 10px;
@@ -1351,13 +1352,13 @@ body #container main #contact .contact-container .contact-wapper .contact ul li 
   border-radius: 4px;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .selectWrap {
   width: 80%;
   margin-left: 36px;
   position: relative;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap select {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .selectWrap select {
   width: 100%;
   padding: 10px;
   background-color: #f1eee8;
@@ -1369,7 +1370,7 @@ body #container main #contact .contact-container .contact-wapper .contact ul li 
   z-index: 1;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap::before {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .selectWrap::before {
   content: "";
   width: 40px;
   height: 100%;
@@ -1381,7 +1382,7 @@ body #container main #contact .contact-container .contact-wapper .contact ul li 
   background-color: #cec9be;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact ul li .selectWrap::after {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact ul li .selectWrap::after {
   content: "";
   width: 0;
   height: 0;
@@ -1397,7 +1398,7 @@ body #container main #contact .contact-container .contact-wapper .contact ul li 
   border-left: 3.5px solid transparent;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .check-btn {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact .check-btn {
   width: 90%;
   max-width: 200px;
   margin: 0 auto 36px;
@@ -1426,14 +1427,96 @@ body #container main #contact .contact-container .contact-wapper .contact .check
           user-select: none;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .check-btn :first-child {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact .check-btn :first-child {
   margin-right: 4px;
   font-size: 1.6rem;
 }
 
-body #container main #contact .contact-container .contact-wapper .contact .check-btn:hover {
+body #container main #contact .contact-container .contact-wrapper .contact-content .contact .check-btn:hover {
   color: #ffffff;
   background-color: #3e3a39;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList {
+  margin-bottom: 16px;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqCate {
+  padding: 15px 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+  background-color: #f1eee8;
+  cursor: pointer;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData {
+  display: none;
+  padding: 36px;
+  background-color: #f9f8f6;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li {
+  margin-bottom: 36px;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li .line {
+  background-color: #E0DDD6;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li .question {
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li .question span {
+  margin-right: 4px;
+  padding: 8px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li .answer {
+  margin-top: 24px;
+  padding: 0 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content .faq .faqList .faqData ul li .answer span {
+  margin-right: 16px;
+  padding: 8px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #b81c22;
+  border-radius: 4px;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content {
+  display: none;
+}
+
+body #container main #contact .contact-container .contact-wrapper .contact-content.active {
+  display: block;
 }
 
 body #container footer {

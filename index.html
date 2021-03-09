@@ -619,70 +619,471 @@
 
                 <div class="contact-container">
 
-                    <div class="option-wapper">
-                        <div class="option active">聯絡我們</div>
-                        <div class="option">常見問題（FAQ）</div>
+                    <div class="option-wrapper">
+                        <div class="option">聯絡我們</div>
+                        <div class="option active">常見問題（FAQ）</div>
                     </div>
 
-                    <div class="contact-wapper">
-                        <div class="contact">
+                    <div class="contact-wrapper">
 
-                            <div class="remark">
-                                <p>※ 預約相關問題，請直接撥門市電話，有專人為你服務。</p>
-                                <p>※ 如需預約，歡迎使用 樂丘線上訂位系統 。</p>
+                        <div class="contact-content">
+                            <div class="contact">
+                                <div class="remark">
+                                    <p>
+                                        <span></span>
+                                        ※ 預約相關問題，請直接撥門市電話，有專人為你服務。
+                                    </p>
+                                    <p>※ 如需預約，歡迎使用 樂丘線上訂位系統 。</p>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <ul>
+
+                                    <li>
+                                        <p class="title">店鋪</p>
+                                        <div class="selectWrap">
+                                            <select>
+                                                <option value="" selected="selected">請選擇</option>
+                                                <option value="東海總店">東海總店</option>
+                                                <option value="一中店">一中店</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <p class="title">來店日期(選填)</p>
+                                        <input id="date" class="content" type="date" name="day" size="60" value="">
+                                    </li>
+
+                                    <li>
+                                        <p class="title">姓名</p>
+                                        <input class="content" type="text" name="name" size="60" value="">
+                                    </li>
+
+                                    <li>
+                                        <p class="title">電話</p>
+                                        <input class="content" type="text" name="phone" size="60" value="">
+
+                                    </li>
+
+                                    <li>
+                                        <p class="title">電子信箱</p>
+                                        <input class="content" type="text" name="mail" size="60" value="">
+                                    </li>
+
+                                    <li>
+                                        <p class="title">意見欄</p>
+                                        <textarea name="detail" class="content" cols="50" rows="5"></textarea>
+                                    </li>
+
+                                </ul>
+
+                                <div class="check-btn">
+                                    <p>
+                                        <span><i class="fas fa-caret-right"></i></span>
+                                        <span>SEND</span>
+                                    </p>
+                                </div>
+
                             </div>
+                        </div>
 
-                            <div class="line"></div>
+                        <div class="contact-content active">
+                            <div class="faq">
 
-                            <ul>
+                                <div class="remark">
+                                    <p>
+                                        如問題無法透過「常見問題」解決可透過客服信箱與我們聯繫，我們將盡快於24小時内回覆您。
+                                    </p>
+                                </div>
+                                <!-- 關於餐飲 -->
+                                <div class="faqList">
 
-                                <li>
-                                    <p class="title">店鋪</p>
-                                    <div class="selectWrap">
-                                        <select>
-                                            <option value="" selected="selected">請選擇</option>
-                                            <option value="東海總店">東海總店</option>
-                                            <option value="一中店">一中店</option>
-                                        </select>
+                                    <div class="faqCate">
+                                        <p>餐飲Q&A</p>
+                                        <i class="fas fa-caret-down"></i>
                                     </div>
-                                </li>
 
-                                <li>
-                                    <p class="title">來店日期(選填)</p>
-                                    <input id="date" class="content" type="date" name="day" size="60" value="">
-                                </li>
+                                    <div class="faqData">
+                                        <ul>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問你們店有賣什麼?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    排餐、義大利麵、燉飯、漢堡、舒芙蕾鬆餅、調飲、手作奶昔等。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    有沒有哪些推薦餐點是一定吃的?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    珍珠奶茶舒芙蕾厚鬆餅是目前最受顧客喜愛的產品。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    餐點會是使用調理包嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    樂丘的餐點都是由專業師傅每天現場精心製作，餐點每季換新滿足您愛嚐鮮的味蕾!
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    生鮮食材哪裡來? 都有洗乾淨嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    樂丘對品質高度堅持，食材皆使用通過SGS食安衛生核證，讓食物不只美味，更吃的安心。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    你們的菜單是固定的嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    我們每天會有2-3款黑板隱藏料理，提供當天特別菜單。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    可以客製化餐點嗎？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    抱歉,沒辦法。<br>
+                                                    但我們提供眾多餐點選擇，一定讓你滿意。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    可以客製化餐點嗎？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    抱歉,沒辦法。<br>
+                                                    但我們提供眾多餐點選擇，一定讓你滿意。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問有提供素食嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    樂丘廚房有提供蛋奶素的餐點。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問有提供酒水類嗎? 若自行攜帶酒水需要收取開瓶費嗎??
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    我們有提供啤酒及烈酒。<br>
+                                                    啤酒類有：台灣金牌啤酒，海尼根，百威，麒麟啤酒。<br>
+                                                    烈酒類有：金門高梁、蘇格登、八八坑道、及麥卡倫。<br>
+                                                    若自行帶酒，需酌收開瓶費200元/瓶，會為您準備酒杯及冰塊。<br>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                                <li>
-                                    <p class="title">姓名</p>
-                                    <input class="content" type="text" name="name" size="60" value="">
-                                </li>
+                                </div>
+                                <!-- 關於店鋪 -->
+                                <div class="faqList">
 
-                                <li>
-                                    <p class="title">電話</p>
-                                    <input class="content" type="text" name="phone" size="60" value="">
+                                    <div class="faqCate">
+                                        <p>店鋪規則</p>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
 
-                                </li>
+                                    <div class="faqData">
+                                        <ul>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問需要提早訂位嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    在此建議您提早訂位，不論平日或假日，我們有開放當月與隔月的訂位。<br>
+                                                    歡迎您盡早訂位，才會訂到比較符合您理想的用餐時段。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    可否攜帶外食？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    不能攜帶外食。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問有限制最低消費嗎？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    身高高於(含)120cm者，最低消費$100。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問可否攜帶寵物至貴店用餐？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    因考慮其他桌客人用餐權利，我們目前未開放攜帶寵物來店用餐的服務。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    訂單滿多少提供外送服務？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    不限金額皆可外送，每筆訂單需收取外送費$39。<br>
+                                                    訂購金額未滿NT$450需酌收外送服務費NT$70。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    當月壽星有沒有甚麼優惠?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    只要您提前3天預訂，用餐當天會贈送一個4吋精美生日蛋糕。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    是否提供兒童座椅?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    非常不好意思，我們現場未提供兒童座椅喔！
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    有無限上網服務嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    店內提供免費無線上網服務。
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                                <li>
-                                    <p class="title">電子信箱</p>
-                                    <input class="content" type="text" name="mail" size="60" value="">
-                                </li>
+                                </div>
+                                <!-- 關於服務 -->
+                                <div class="faqList">
 
-                                <li>
-                                    <p class="title">意見欄</p>
-                                    <textarea name="detail" class="content" cols="50" rows="5"></textarea>
-                                </li>
+                                    <div class="faqCate">
+                                        <p>會員&服務</p>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
 
-                            </ul>
+                                    <div class="faqData">
+                                        <ul>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問會員卡遺失怎麼辦?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    為了確保貴賓能享有VIP的權利；因舊款會員卡是磁卡感應，所以一定要有實體卡才可以刷出您的資料為您做折扣，新版樂丘會員已與LINE綁定，因此須出示您的樂丘LINE會員才能為您折扣。<br>
+                                                    若會原卡『遺失』可依原會員卡資料至門市查詢，核對身分正確後，將補發一組虛擬會員卡，將該會員卡號綁定至您的LINE裝置後即可使用，而舊卡將被停用敬祈見諒。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    是否為國民旅遊卡的特約商店?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    是的，歡迎持國民旅遊卡來店裡消費!
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    關於產品建議，要怎麼跟你們說？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    可以直接在網上留言給我們，我們會認真聽取您的建議。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問有提供刷卡服務嗎?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    2016年12月1日起，樂丘全店提供刷卡服務，可接受卡片類型為『VISA』、『MasterCard』、『JCB』、『銀聯卡』。<br>
+                                                    目前尚未開放『美國運通卡』和『花旗大來卡』，不便之處敬請見諒。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    是否有提供行動支付?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    全品牌門市皆有提供 Apple Pay 、Samsung Pay、Android Pay、Google Pay。
+                                                </div>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                            <div class="check-btn">
-                                <p>
-                                    <span><i class="fas fa-caret-right"></i></span>
-                                    <span>SEND</span>
-                                </p>
+                                </div>
+                                <!-- 關於網購 -->
+                                <div class="faqList">
+
+                                    <div class="faqCate">
+                                        <p>關於商品訂購</p>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+
+                                    <div class="faqData">
+                                        <ul>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    請問網路商品訂購方式？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    於官方LINE上訂購後刷卡付款，使用宅配方式寄送。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    訂購需要加入會員嗎？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    加入官方LINE會員進入購買清單頁面填寫資料即可訂購。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    是否訂購成功?
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    訂單成立後，系統會發送『訂單確認』電子郵件給您，確認訂單詳細資料，包括訂購明細和收件資訊。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    訂購後轉至付款網頁呈現一片空白，請問是否訂購成功？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    不一定成功。如有登入會員訂購者，請點選頁右側「查詢訂單」功能查詢，再確認訂單資料。或請來信客服信箱，並註明您的訂單內容及聯絡資訊，將由專人為您處理。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    付款完成後訂單就算成立嗎？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    消費者已付款完成，視為訂單契約成立，且買賣雙方皆以E-mail通知信或查詢訂單作為訂單表示方法。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    如何追蹤訂單進度？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    有關商品的出貨進度，可在『我的帳號>訂單』中查詢。
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="question">
+                                                    <span>Q.</span>
+                                                    如何取消訂單？訂購數量有誤或商品訂錯如何更改？
+                                                </div>
+                                                <div class="line"></div>
+                                                <div class="answer">
+                                                    <span>A</span>
+                                                    由於受限銀行規範，無法變更訂單內容、金額、退補差額方式換購其它商品，因此無法提供網路直接由顧客取消訂單或修改。<br>
+                                                    如有需要變更，請來信客服信箱並註明您的訂單內容及聯絡資訊，將由專人為您處理。
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
                             </div>
-
-
                         </div>
                     </div>
 
