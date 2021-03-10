@@ -25,6 +25,63 @@ $("#banner").click(function () {
     }
 })
 
+$(window).resize(function () {
+    if ($(window).width() < 768) {
+        $("body").removeClass('nav-open')
+    }
+})
+
+
+//  header
+
+$(".headerHumburger").click(function () {
+    if ($("header").hasClass('active')) {
+        $("header").removeClass('active')
+        $("header").children("nav").slideUp( 300)
+    }else{
+        $("header").addClass('active')
+        $("header").children("nav").slideDown( 450 )
+    }
+})
+
+$(".headerCloser").click(function () {
+    if ($("header").hasClass('active')) {
+        $("header").removeClass('active')
+        $("header").children("nav").slideUp( 300)
+    }else{
+        $("header").addClass('active')
+        $("header").children("nav").slideDown( 450 )
+    }
+})
+
+$(window).resize(function () {
+    if ($(window).width() > 768) {
+        $("header").removeClass('active')
+        $("header").children("nav").slideUp( 300)
+    }
+})
+
+//  FAQ
+
+$('.option').click(
+    function () {
+        $('.option,.contact-content').removeClass("active")
+        $(this).addClass("active")
+        $('.contact-content').eq($(this).index()).addClass("active")
+    }
+)
+
+$(".faqCate").click(function () {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass("active")
+        $(this).children(".fa-caret-up").removeClass("fa-caret-up").addClass("fa-caret-down")
+        $(this).next().slideUp( 300)
+    } else {
+        $(this).addClass("active")
+        $(this).children(".fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-up")
+        $(this).next().slideDown( 450 )
+    }
+})
 
 //當前導航位置
 
@@ -118,31 +175,6 @@ var shopSwiper02 = new Swiper('.shopSwiper-02', {
         delay: 4500,
     },
 });
-
-
-//FAQ
-
-$('.option').click(
-    function () {
-        $('.option,.contact-content').removeClass("active")
-        $(this).addClass("active")
-        $('.contact-content').eq($(this).index()).addClass("active")
-    }
-)
-
-
-
-$(".faqCate").click(function () {
-    if ($(this).hasClass('active')) {
-        $(this).removeClass("active")
-        $(this).children(".fa-caret-up").removeClass("fa-caret-up").addClass("fa-caret-down")
-        $(this).next().slideUp( 300)
-    } else {
-        $(this).addClass("active")
-        $(this).children(".fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-up")
-        $(this).next().slideDown( 450 )
-    }
-})
 
 // img>svg 直接css改顏色
 

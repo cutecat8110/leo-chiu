@@ -8,9 +8,205 @@ html {
 body {
     overflow-x: hidden;
 
+    header {
+        width: 100vw;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        background-color: rgba(255, 255, 255, 0.9);
+
+        display: none;
+
+        &.active {
+            background-color: #ffffff;
+        }
+
+        @include pad {
+            display: block;
+        }
+
+        .headerOpener {
+            width: 100%;
+            height: 60px;
+
+            padding: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .headerHumburger {
+                width: 36px;
+                height: 16px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                cursor: pointer;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                span {
+                    width: 100%;
+                    height: 4px;
+
+                    display: inline-block;
+
+                    background-color: #3e3a39;
+                }
+            }
+
+            .openTime {
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                text-indent: 0.05em;
+
+                user-select: none;
+
+                span:last-child {
+                    margin-top: 4px;
+
+                    font-family: "Roboto", "Roboto", sans-serif;
+                }
+            }
+        }
+
+        nav {
+            width: 100%;
+
+            display: none;
+
+            .wrapper {
+                width: 100%;
+
+                padding: 16px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                ul {
+                    margin: 0 auto;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        margin-bottom: 16px;
+
+                        display: flex;
+
+                        h4 {
+                            position: relative;
+
+                            white-space: nowrap;
+
+                            i {
+                                margin-right: 8px;
+                            }
+
+                            &::after {
+                                content: "";
+
+                                width: 0%;
+                                height: 1px;
+
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+
+                                background-color: #212121;
+
+                                transition: all 0.1s ease-in-out;
+                            }
+                        }
+                    }
+                }
+
+                .headerCloser {
+                    padding: 16px 36px;
+
+                    font-weight: 500;
+
+                    transition: all 0.2s 0.2s ease-in-out;
+
+                    user-select: none;
+                    cursor: pointer;
+
+                    span:first-child {
+                        font-size: 1.4rem;
+                    }
+
+                    span:last-child {
+                        margin-left: 4px;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            &.banner-point {
+                .banner-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.about-point {
+                .about-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.newsLetter-point {
+                .newsLetter-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.menu-point {
+                .menu-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.shopInfo-point {
+                .shopInfo-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.contact-point {
+                .contact-point {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     aside {
         width: $asideWith-close;
         height: 100vh;
+
+        display: block;
+
         position: fixed;
         left: 0;
         top: 0;
@@ -18,6 +214,10 @@ body {
         background-color: #ffffff;
 
         transition: all 0.4s ease-in-out;
+
+        @include pad {
+            display: none;
+        }
 
         .navOpener {
             width: $asideWith-close;
@@ -210,15 +410,17 @@ body {
         height: 100vh;
         width: 100vw;
 
-        margin-left: $asideWith-close;
-
         position: fixed;
         top: 0;
         left: 0;
 
         z-index: -1;
 
-        transition: all 0.4s ease-in-out;
+        transition: left 0.4s ease-in-out;
+
+        @include pad {
+            margin-left: unset;
+        }
 
         .swiper-container {
             width: 100%;
@@ -245,6 +447,7 @@ body {
                     background: rgba(0, 0, 0, 0.2);
                 }
             }
+
             .banner-1 {
                 background-image: url(../img/banner/use-03.jpg);
             }
@@ -269,6 +472,10 @@ body {
         box-sizing: border-box;
 
         transition: all 0.4s ease-in-out;
+
+        @include pad {
+            margin-left: unset;
+        }
 
         main {
             .content-s {
@@ -310,7 +517,7 @@ body {
                 }
 
                 h6 {
-                    margin: $spacing-m 0;
+                    margin: 24px 0;
 
                     font-weight: 400;
                     letter-spacing: 1em;
@@ -337,10 +544,22 @@ body {
 
                     background-color: $mainColor-1;
 
+                    @include pad {
+                        padding: 48px 32px;
+                    }
+
+                    @include mobile {
+                        padding: 48px 20px;
+                    }
+
                     .text {
                         padding: 0 22%;
 
                         text-align: center;
+
+                        @include pc-HD {
+                            padding: unset;
+                        }
 
                         h2 {
                             margin-bottom: 4px;
@@ -352,6 +571,10 @@ body {
 
                         h5 {
                             margin-bottom: 72px;
+
+                            @include pc-HD {
+                                margin-bottom: 36px;
+                            }
                         }
                     }
 
@@ -361,6 +584,18 @@ body {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         gap: 24px;
+
+                        @include pc-HD {
+                            gap: 16px;
+                        }
+
+                        @include pad {
+                            gap: 24px;
+                        }
+
+                        @include mobile {
+                            grid-template-columns: 1fr;
+                        }
 
                         .img {
                             background-position: center;
@@ -374,13 +609,23 @@ body {
                             grid-column-end: 2;
 
                             background-image: url(../img/about/use-1.jpg);
+
+                            @include mobile {
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                            }
                         }
 
                         :nth-child(2) {
+                            padding-bottom: calc(100% + 12px);
                             grid-column-start: 2;
                             grid-column-end: 3;
 
                             background-image: url(../img/about/use-2.jpg);
+                            @include mobile {
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                            }
                         }
 
                         :last-child {
@@ -390,6 +635,13 @@ body {
                             grid-column-end: 3;
 
                             background-image: url(../img/about/use-3.jpg);
+                            @include mobile {
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+
+                                background-position: right;
+                                padding-bottom: calc(100% + 12px);
+                            }
                         }
                     }
                 }
@@ -400,17 +652,45 @@ body {
 
                     background-color: $mainColor-2;
 
+                    @include mobile {
+                        grid-template-columns: 1fr;
+                    }
+
                     .text {
                         padding: 33% 12%;
+
+                        @include pc-HD {
+                            padding: 33% 36px;
+                        }
+
+                        @include pad {
+                            padding: 33% 32px;
+                        }
+
+                        @include mobile {
+                            padding: 48px 20px;
+                        }
 
                         text-align: center;
 
                         h3 {
                             margin-bottom: 24px;
+
+                            @include pc-HD {
+                                margin-bottom: 8px;
+                            }
                         }
 
                         h5 {
                             margin-bottom: 36px;
+
+                            @include pc-HD {
+                                margin-bottom: 16px;
+                            }
+
+                            @include mobile {
+                                margin-bottom: 0;
+                            }
                         }
                     }
 
@@ -418,6 +698,11 @@ body {
                         background-image: url("../img/about/use-41.jpg");
                         background-position: center;
                         background-size: cover;
+                        padding-bottom: 0;
+
+                        @include mobile {
+                            padding-bottom: 133%;
+                        }
                     }
                 }
 
@@ -430,6 +715,22 @@ body {
                     background-color: $mainColor-3;
                     gap: 12%;
 
+                    @include pc-XGA {
+                        padding: 160px 32px;
+                        gap: 16px;
+                    }
+
+                    @include pad {
+                        padding: 48px 32px;
+                        gap: 36px;
+                    }
+
+                    @include mobile {
+                        padding: 48px 20px;
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
+
                     .img {
                         grid-column-start: 1;
                         grid-column-end: 2;
@@ -437,6 +738,14 @@ body {
                         background-image: url("../img/about/5.jpg");
                         background-position: center;
                         background-size: cover;
+
+                        padding-bottom: 0;
+
+                        @include mobile {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            padding-bottom: 133%;
+                        }
                     }
 
                     .text {
@@ -447,12 +756,26 @@ body {
 
                         text-align: center;
 
+                        @include mobile {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            padding: 36px 0 0 0;
+                        }
+
                         h3 {
                             margin-bottom: 24px;
+
+                            @include pc-HD {
+                                margin-bottom: 8px;
+                            }
                         }
 
                         h5 {
                             margin-bottom: 36px;
+
+                            @include pc-HD {
+                                margin-bottom: 16px;
+                            }
                         }
                     }
                 }
@@ -468,6 +791,10 @@ body {
                 align-items: center;
 
                 background-color: $mainColor-4;
+
+                @include pad {
+                    padding: 48px 32px;
+                }
 
                 #newsLetter-point {
                     position: absolute;
@@ -495,6 +822,12 @@ body {
                     position: relative;
 
                     padding: 0 6%;
+
+                    display: block;
+
+                    @include pad {
+                        display: none;
+                    }
 
                     .swiper-container {
                         height: 100%;
@@ -644,7 +977,7 @@ body {
                                 height: 0;
 
                                 border-style: solid;
-                                border-width: 10px 0 10px $spacing-s;
+                                border-width: 10px 0 10px 16px;
                                 border-color: transparent transparent transparent #aabecb;
                             }
                         }
@@ -660,9 +993,143 @@ body {
                                 height: 0;
 
                                 border-style: solid;
-                                border-width: 10px $spacing-s 10px 0;
+                                border-width: 10px 16px 10px 0;
                                 border-color: transparent #aabecb transparent transparent;
                             }
+                        }
+                    }
+                }
+
+                .newsLetter-pad {
+                    width: 100%;
+
+                    display: none;
+
+                    @include pad {
+                        display: block;
+                    }
+
+                    .wrapper {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 36px;
+
+                        @include mobile {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .card {
+                            position: relative;
+
+                            background-position: center;
+                            background-size: cover;
+
+                            &::after {
+                                content: "";
+
+                                padding-bottom: 125%;
+
+                                display: block;
+                            }
+
+                            .more {
+                                width: 100%;
+                                height: 100%;
+
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                font-size: 1.4rem;
+                                letter-spacing: 0.05em;
+                                text-indent: 0.05em;
+                                color: #ffffff;
+
+                                background-color: rgba(170, 190, 203, 0.8);
+
+                                transition: all 0.1s ease-in-out;
+
+                                opacity: 0;
+                                cursor: pointer;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .block {
+                                width: 100%;
+
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+
+                                padding: 16px;
+
+                                overflow: hidden;
+
+                                font-size: 1.4rem;
+                                letter-spacing: 0.05em;
+                                white-space: nowrap;
+
+                                background: #ffffff;
+
+                                .data {
+                                    margin-bottom: 8px;
+
+                                    display: flex;
+                                    align-items: center;
+
+                                    .tag {
+                                        overflow: hidden;
+
+                                        text-overflow: ellipsis;
+                                    }
+
+                                    .line {
+                                        width: 1px;
+                                        height: 1.4rem;
+
+                                        margin: 0 8px;
+
+                                        display: block;
+
+                                        background-color: #3e3a39;
+                                    }
+
+                                    .time {
+                                        font-family: "Roboto", "Roboto", sans-serif;
+                                    }
+                                }
+
+                                .title {
+                                    overflow: hidden;
+
+                                    font-family: "Roboto", "Roboto", sans-serif;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+
+                        .newsSlide-1 {
+                            background-image: url("../img/new/2020_08_07.jpg");
+                        }
+
+                        .newsSlide-2 {
+                            background-image: url("../img/new/2020_05_07.jpg");
+                        }
+
+                        .newsSlide-3 {
+                            background-image: url("../img/new/2020_05_01.jpg");
+                        }
+
+                        .newsSlide-4 {
+                            background-image: url("../img/new/2020_04_19.jpg");
                         }
                     }
                 }
@@ -682,10 +1149,33 @@ body {
 
                     background-color: $mainColor-1;
 
+                    @include pc-HD {
+                        padding: 160px 72px;
+                    }
+
+                    @include pc-XGA {
+                        padding: 160px 32px;
+                    }
+
+                    @include pad {
+                        padding: 48px 32px;
+                    }
+
+                    @include mobile {
+                        padding: 48px 20px;
+                    }
+
                     .menu-wrapper {
                         width: 100%;
 
                         display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+
+                        @include pad {
+                            flex-direction: column;
+                            align-items: center;
+                        }
 
                         .text {
                             margin: 16px 72px 0 0;
@@ -695,9 +1185,30 @@ body {
 
                             writing-mode: vertical-lr;
 
+                            @include pc-HD {
+                                margin: 16px 36px 0 0;
+                            }
+
+                            @include pc-XGA {
+                                margin: 0 16px 0 0;
+                            }
+
+                            @include pad {
+                                margin: 0 0 36px 0;
+
+                                flex-direction: column;
+                                writing-mode: unset;
+                                align-items: center;
+                            }
+
                             h2 {
                                 text-indent: unset;
                                 margin-left: 4px;
+
+                                @include pad {
+                                    text-indent: 0.5em;
+                                    margin: 0 0 4px 0;
+                                }
                             }
                         }
 
@@ -710,6 +1221,10 @@ body {
                                 position: relative;
 
                                 padding-bottom: 56.25%;
+
+                                @include mobile {
+                                    padding-bottom: 133%;
+                                }
 
                                 .menuSwiper-wrapper {
                                     width: 100%;
@@ -728,6 +1243,11 @@ body {
 
                                         grid-column-start: 1;
                                         grid-column-end: 4;
+
+                                        @include mobile {
+                                            grid-column-start: 1;
+                                            grid-column-end: 5;
+                                        }
 
                                         .swiper-slide {
                                             position: relative;
@@ -758,8 +1278,21 @@ body {
 
                                                 transition: all 0.1s ease-in-out;
 
+                                                transform: unset;
+
                                                 cursor: pointer;
 
+                                                @include pad {
+                                                    right: 36px;
+                                                    bottom: 36px;
+                                                }
+
+                                                @include mobile {
+                                                    right: 50%;
+                                                    bottom: 50%;
+
+                                                    transform: translate(+50%, +50%);
+                                                }
                                                 :first-child {
                                                     margin-right: 4px;
 
@@ -784,6 +1317,12 @@ body {
 
                                         box-sizing: border-box;
                                         margin-left: 16px;
+
+                                        display: block;
+
+                                        @include mobile {
+                                            display: none;
+                                        }
 
                                         .swiper-slide {
                                             position: relative;
@@ -874,22 +1413,74 @@ body {
 
                     display: flex;
                     flex-direction: row-reverse;
+                    align-items: stretch;
 
                     background-color: $mainColor-2;
+
+                    @include pc-HD {
+                        padding: 160px 72px;
+                    }
+
+                    @include pc-XGA {
+                        padding: 160px 32px;
+                    }
+
+                    @include pad {
+                        padding: 48px 36px;
+                        flex-direction: column;
+                    }
+
+                    @include mobile {
+                        padding: 48px 20px;
+                    }
 
                     .text {
                         margin: 16px 0 0 72px;
 
                         display: flex;
                         flex-direction: column-reverse;
+                        align-items: flex-start;
 
                         writing-mode: vertical-lr;
+
+                        @include pc-HD {
+                            margin: 16px 0 0 36px;
+                        }
+
+                        @include pc-XGA {
+                            margin: 0 0 0 16px;
+                        }
+
+                        @include pad {
+                            margin: 0 0 36px 0;
+                            flex-direction: column;
+                            writing-mode: unset;
+                            align-items: center;
+                        }
 
                         h2 {
                             text-indent: unset;
                             margin: 0 4px 0 36px;
+
+                            @include pad {
+                                text-align: center;
+                                text-indent: 0.5em;
+                                margin: 0 0 4px 0;
+                            }
+
+                            @include mobile {
+                                text-align: center;
+                                text-indent: 0.05em;
+                            }
                         }
 
+                        h6 {
+                            text-align: unset;
+                            @include pad {
+                                text-align: center;
+                                margin-bottom: 36px;
+                            }
+                        }
                         h3 {
                             span {
                                 writing-mode: horizontal-tb;
@@ -898,6 +1489,10 @@ body {
 
                         h5 {
                             margin-left: 24px;
+
+                            @include pc-HD {
+                                margin-bottom: 8px;
+                            }
                         }
 
                         :last-child {
@@ -910,8 +1505,15 @@ body {
 
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
-                        grid-column-gap: 36px;
+                        gap: 36px;
 
+                        @include pc-HD {
+                            gap: 16px;
+                        }
+
+                        @include mobile {
+                            grid-template-columns: 1fr;
+                        }
                         .img {
                             padding-bottom: 133.33%;
 
@@ -941,6 +1543,18 @@ body {
 
                 background-color: $mainColor-4;
 
+                @include pc-HD {
+                    padding: 160px 72px;
+                }
+
+                @include pc-XGA {
+                    padding: 160px 14%;
+                }
+
+                @include pad {
+                    padding: 48px 36px;
+                }
+
                 #shopInfo-point {
                     position: absolute;
                     top: 0;
@@ -969,10 +1583,17 @@ body {
 
                         display: flex;
 
+                        @include pc-XGA {
+                            flex-direction: column-reverse;
+                        }
                         .img {
                             position: relative;
                             width: 50%;
 
+                            @include pc-XGA {
+                                width: 100%;
+                                padding-bottom: 75%;
+                            }
                             .swiper-container {
                                 position: absolute;
                                 width: 100%;
@@ -1012,6 +1633,10 @@ body {
 
                             background-color: #ffffff;
 
+                            @include pc-XGA {
+                                width: 100%;
+                            }
+
                             .data-wrapper {
                                 width: 100%;
 
@@ -1020,6 +1645,14 @@ body {
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+
+                                @include pc-HD {
+                                    padding: 72px 0;
+                                }
+
+                                @include pad {
+                                    padding: 36px 0;
+                                }
 
                                 h3 {
                                     margin-bottom: 36px;
@@ -1042,6 +1675,11 @@ body {
                                         margin-bottom: 16px;
 
                                         display: flex;
+                                        flex-direction: row;
+
+                                        @include pad {
+                                            flex-direction: column;
+                                        }
 
                                         .title {
                                             width: 20%;
@@ -1050,12 +1688,23 @@ body {
                                             font-weight: 700;
                                             text-align: right;
                                             white-space: nowrap;
+                                            @include pad {
+                                                width: 100%;
+                                                min-width: unset;
+                                                text-align: center;
+                                            }
                                         }
 
                                         .content {
                                             margin-left: 36px;
 
                                             word-break: break-all;
+
+                                            @include pad {
+                                                width: 100%;
+                                                margin: unset;
+                                                text-align: center;
+                                            }
                                         }
 
                                         a {
@@ -1081,12 +1730,25 @@ body {
                                     padding-bottom: 36px;
 
                                     display: flex;
+                                    flex-direction: row;
                                     justify-content: space-around;
 
                                     font-family: "Roboto", "Roboto", sans-serif;
 
+                                    @include pc-HD {
+                                        padding-bottom: unset;
+                                    }
+
+                                    @include pad {
+                                        flex-direction: column;
+
+                                        padding-bottom: 0;
+                                    }
+
                                     .btn {
                                         padding: 15px 35px 15px 35px;
+
+                                        margin-bottom: unset;
 
                                         font-size: 1.4rem;
                                         font-weight: 600;
@@ -1099,6 +1761,10 @@ body {
 
                                         cursor: pointer;
                                         user-select: none;
+
+                                        @include pad {
+                                            text-align: center;
+                                        }
                                     }
 
                                     .booking {
@@ -1106,8 +1772,14 @@ body {
 
                                         background-color: #b81c22;
 
+                                        margin-bottom: 0;
+
                                         &:hover {
                                             background-color: #c92a30;
+                                        }
+
+                                        @include pad {
+                                            margin-bottom: 20px;
                                         }
                                     }
 
@@ -1131,6 +1803,11 @@ body {
 
                     .shop:first-child {
                         flex-direction: row-reverse;
+
+                        @include pc-XGA {
+                            flex-direction: column-reverse;
+                            margin-bottom: 72px;
+                        }
                     }
                 }
             }
@@ -1146,6 +1823,17 @@ body {
 
                 background-color: $mainColor-1;
 
+                @include pc-HD {
+                    padding: 160px 14%;
+                }
+
+                @include pc-XGA {
+                    padding: 160px 72px;
+                }
+
+                @include pad {
+                    padding: 48px 36px;
+                }
                 #contact-point {
                     position: absolute;
                     top: 0;
@@ -1214,6 +1902,9 @@ body {
                                 width: 100%;
                                 padding: 36px 52px;
 
+                                @include pad {
+                                    padding: 36px 24px;
+                                }
                                 span {
                                     display: block;
                                     margin-bottom: 16px;
@@ -1233,10 +1924,21 @@ body {
 
                                     width: 100%;
 
+                                    @include pad {
+                                        padding: 36px 24px;
+                                    }
+                                    @include pad {
+                                        padding: 36px 0;
+                                    }
+
                                     li {
                                         margin-bottom: 16px;
 
                                         display: flex;
+                                        flex-direction: row;
+                                        @include pad {
+                                            flex-direction: column;
+                                        }
 
                                         .title {
                                             width: 20%;
@@ -1248,6 +1950,12 @@ body {
 
                                             font-weight: 700;
                                             white-space: nowrap;
+
+                                            @include pad {
+                                                width: 100%;
+                                                min-width: 0;
+                                                justify-content: flex-start;
+                                            }
                                         }
 
                                         .content {
@@ -1261,6 +1969,12 @@ body {
 
                                             border: none;
                                             border-radius: 4px;
+
+                                            @include pad {
+                                                width: 100%;
+
+                                                margin-left: 0;
+                                            }
                                         }
 
                                         .selectWrap {
@@ -1269,6 +1983,12 @@ body {
                                             margin-left: 36px;
 
                                             position: relative;
+
+                                            @include pad {
+                                                width: 100%;
+
+                                                margin-left: 0;
+                                            }
 
                                             select {
                                                 width: 100%;
@@ -1385,31 +2105,31 @@ body {
                                         ul {
                                             li {
                                                 margin-bottom: 36px;
-                                                .line{
-                                                    background-color: #E0DDD6;
+                                                .line {
+                                                    background-color: #e0ddd6;
                                                 }
                                                 .question {
                                                     margin-bottom: 4px;
-                                                    
+
                                                     display: flex;
                                                     align-items: center;
-                                                    
+
                                                     font-weight: 700;
 
                                                     span {
                                                         margin-right: 4px;
-                                                        
+
                                                         padding: 8px;
-                                                        
+
                                                         font-size: 3.2rem;
                                                         font-weight: 700;
-                                                        
+
                                                         border-radius: 4px;
                                                     }
                                                 }
                                                 .answer {
                                                     margin-top: 24px;
-                                                    
+
                                                     padding: 0 36px;
 
                                                     display: flex;
@@ -1417,13 +2137,13 @@ body {
 
                                                     span {
                                                         margin-right: 16px;
-                                                    
+
                                                         padding: 8px;
-                                                    
+
                                                         font-size: 3.2rem;
                                                         font-weight: 700;
                                                         color: #fff;
-                                                    
+
                                                         background-color: #b81c22;
                                                         border-radius: 4px;
                                                     }
@@ -1448,46 +2168,91 @@ body {
         }
 
         footer {
-            height: 180px;
+            height: 160px;
             padding: 0 72px;
 
             background-color: #616161;
+
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
 
+            @include pc-HD {
+                height: unset;
+                padding: 72px 0;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .communityBlock {
                 display: flex;
                 align-items: center;
+
+                @include pc-HD {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 24px;
+                }
+
                 .logo-wrapper {
-                    padding: $spacing-xs;
-                    margin-right: $spacing-m;
+                    padding: 8px;
+                    margin-right: 24px;
+
+                    @include pc-HD {
+                        margin: unset;
+                    }
+
                     .logo {
                         width: 168px;
                     }
                 }
-                .community {
-                    height: 40px;
-                    width: 40px;
 
-                    margin-right: $spacing-xs;
-
+                .wrapper {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    width: unset;
 
-                    i {
-                        font-size: 2.4rem;
+                    @include pc-HD {
+                        width: 100%;
+                        justify-content: space-around;
+                    }
+                    .community {
+                        height: 40px;
+                        width: 40px;
+
+                        margin-right: 8px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include pc-HD {
+                            margin: unset;
+                        }
+
+                        i {
+                            font-size: 2.4rem;
+                        }
                     }
                 }
             }
 
             .copyrightBlock {
                 display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                @include pc-HD {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .wrapper {
+                    display: flex;
+                }
 
                 .copyright {
-                    margin-left: $spacing-m;
+                    margin-left: 24px;
                 }
             }
         }

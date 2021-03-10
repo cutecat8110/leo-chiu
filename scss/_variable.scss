@@ -1,19 +1,5 @@
-$spacing-2xs: 4px;
-$spacing-xs: 8px;
-$spacing-s: 16px;
-$spacing-m: 24px;
-$spacing-l: 36px;
-$spacing-xl: 72px;
-$spacing-2xl: 160px; //主題間距
-
 $asideWith-close: 48px;
 $asideWith-open: 256px;
-
-//主題間距
-%block-space {
-    padding-top: $spacing-2xl;
-    padding-bottom: $spacing-2xl;
-}
 
 
 //顏色
