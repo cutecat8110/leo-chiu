@@ -9,7 +9,7 @@
 
 此專案旨在提升前端切版技術，採用純粹的 HTML、CSS 和 JavaScript 進行獨立開發，以保持前端結構的簡潔和高效。<br>專案注重用戶體驗，致力於設計直覺易用的操作界面，同時保持餐廳風格，為使用者提供良好的瀏覽和訂位體驗。
 
-* [Demo](cutecat8110.github.io/leo-chiu/) 
+* [Demo](https://cutecat8110.github.io/leo-chiu/) 
 
 ## 🔨 核心技術
 
@@ -65,3 +65,4 @@
     </tr>
   </tbody>
 </table>
+
