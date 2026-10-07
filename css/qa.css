@@ -1,0 +1,111 @@
+:where(a, [role=button], [role=tab], input, select, textarea):focus-visible {
+  outline: 2px solid #756e6c;
+  outline-offset: 4px;
+}
+
+html body aside nav[inert],
+html body:not(.nav-open) aside .navCloser {
+  visibility: hidden;
+}
+
+html body #container {
+  transition: left 0.4s ease-in-out;
+}
+
+html body #container main #newsLetter .newsLetter-swiper {
+  overflow: hidden;
+}
+
+html body #container main #newsLetter .swiper-button-next,
+html body #container main #newsLetter .swiper-button-prev {
+  width: min(44px, 5%);
+  height: 44px;
+  margin-top: -22px;
+  color: rgba(173, 160, 126, 0.6);
+}
+html body #container main #newsLetter .swiper-button-next::after,
+html body #container main #newsLetter .swiper-button-prev::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: border-color 0.1s ease-in-out;
+}
+
+html body #container main #newsLetter .swiper-button-next {
+  right: auto;
+  left: 95%;
+}
+html body #container main #newsLetter .swiper-button-next::after {
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent rgba(173, 160, 126, 0.6);
+}
+html body #container main #newsLetter .swiper-button-next:hover::after {
+  border-left-color: #ada07e;
+}
+
+html body #container main #newsLetter .swiper-button-prev {
+  right: 95%;
+  left: auto;
+}
+html body #container main #newsLetter .swiper-button-prev::after {
+  border-width: 10px 16px 10px 0;
+  border-color: transparent rgba(173, 160, 126, 0.6) transparent transparent;
+}
+html body #container main #newsLetter .swiper-button-prev:hover::after {
+  border-right-color: #ada07e;
+}
+
+html body #container main #menu .subMenu-swiper .swiper-slide:focus-visible {
+  outline-offset: -3px;
+}
+html body #container main #menu .subMenu-swiper .swiper-slide:focus-visible .mask {
+  background-color: rgba(195, 214, 218, 0.8);
+}
+html body #container main #menu .subMenu-swiper .swiper-slide:focus-visible p {
+  opacity: 1;
+}
+
+html body #container main #contact .selectWrap::before,
+html body #container main #contact .selectWrap::after {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+  html body header nav {
+    max-height: calc(100vh - 60px);
+    max-height: calc(100dvh - 60px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  html body.nav-open #container,
+  html body.nav-open #banner-img {
+    left: 0;
+  }
+  html body #container main #contact .content,
+  html body #container main #contact .selectWrap {
+    min-width: 0;
+    max-width: 100%;
+  }
+  html body #container main #contact textarea {
+    resize: vertical;
+  }
+}
+@media (min-width: 321px) and (max-width: 389px) {
+  html body #container main h2 {
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  html body #container main #shopInfo h2,
+  html body #container main #contact h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: 0.05em;
+    text-indent: 0.05em;
+  }
+}

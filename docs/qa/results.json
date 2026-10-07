@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-07",
+  "baseCommit": "88223271fb71f91e792844e468c9d79d54ef64b1",
+  "environment": {
+    "browser": "Codex in-app browser on macOS",
+    "method": "Desktop browser with viewport overrides; no physical iOS or Android device tested"
+  },
+  "layouts": [
+    {
+      "containerLeft": 0,
+      "documentWidth": 320,
+      "headingHeights": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "overflow": [],
+      "width": 320
+    },
+    {
+      "containerLeft": 0,
+      "documentWidth": 375,
+      "headingHeights": [
+        56,
+        56,
+        56,
+        56,
+        40,
+        40
+      ],
+      "overflow": [],
+      "width": 375
+    },
+    {
+      "containerLeft": 0,
+      "documentWidth": 390,
+      "headingHeights": [
+        56,
+        56,
+        56,
+        56,
+        40,
+        40
+      ],
+      "overflow": [],
+      "width": 390
+    },
+    {
+      "containerLeft": 0,
+      "documentWidth": 768,
+      "headingHeights": [
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "overflow": [],
+      "width": 768
+    },
+    {
+      "containerLeft": 48,
+      "documentWidth": 769,
+      "headingHeights": [
+        56,
+        56,
+        288,
+        288,
+        56,
+        56
+      ],
+      "overflow": [],
+      "width": 769
+    },
+    {
+      "containerLeft": 48,
+      "documentWidth": 1024,
+      "headingHeights": [
+        56,
+        56,
+        288,
+        288,
+        56,
+        56
+      ],
+      "overflow": [],
+      "width": 1024
+    },
+    {
+      "containerLeft": 48,
+      "documentWidth": 1440,
+      "headingHeights": [
+        56,
+        56,
+        288,
+        288,
+        56,
+        56
+      ],
+      "overflow": [],
+      "width": 1440
+    }
+  ],
+  "mobileAnchors": [
+    {
+      "name": "TOP",
+      "expanded": "false",
+      "hash": "#banner-point"
+    },
+    {
+      "name": "ABOUT",
+      "expanded": "false",
+      "hash": "#about-point"
+    },
+    {
+      "name": "NEWS LETTER",
+      "expanded": "false",
+      "hash": "#newsLetter-point"
+    },
+    {
+      "name": "MENU",
+      "expanded": "false",
+      "hash": "#menu-point"
+    },
+    {
+      "name": "SHOP INFO",
+      "expanded": "false",
+      "hash": "#shopInfo-point"
+    },
+    {
+      "name": "CONTACT",
+      "expanded": "false",
+      "hash": "#contact-point"
+    }
+  ],
+  "desktopAnchors": [
+    {
+      "name": "TOP",
+      "hash": "#banner-point"
+    },
+    {
+      "name": "ABOUT",
+      "hash": "#about-point"
+    },
+    {
+      "name": "NEWS LETTER",
+      "hash": "#newsLetter-point"
+    },
+    {
+      "name": "MENU",
+      "hash": "#menu-point"
+    },
+    {
+      "name": "SHOP INFO",
+      "hash": "#shopInfo-point"
+    },
+    {
+      "name": "CONTACT",
+      "hash": "#contact-point"
+    }
+  ],
+  "interactions": [
+    {
+      "test": "FAQ rapid toggle after settling",
+      "display": "none",
+      "expanded": "false"
+    },
+    {
+      "test": "contact input",
+      "fields": [
+        {
+          "name": "shop",
+          "hasValue": true
+        },
+        {
+          "name": "day",
+          "hasValue": true
+        },
+        {
+          "name": "name",
+          "hasValue": true
+        },
+        {
+          "name": "phone",
+          "hasValue": true
+        },
+        {
+          "name": "mail",
+          "hasValue": true
+        },
+        {
+          "name": "detail",
+          "hasValue": true
+        }
+      ],
+      "sendTag": "DIV"
+    },
+    {
+      "test": "769px newsletter overflow",
+      "arrowIcons": 0,
+      "clipping": "hidden",
+      "docWidth": 769,
+      "nextRight": 768.9921875,
+      "width": 769
+    },
+    {
+      "test": "newsletter next",
+      "before": "swiper-slide newsSlide-1 swiper-slide-active",
+      "after": "swiper-slide newsSlide-2 swiper-slide-active"
+    },
+    {
+      "test": "newsletter previous",
+      "active": "swiper-slide newsSlide-1 swiper-slide-active"
+    },
+    {
+      "test": "desktop keyboard open",
+      "bodyClass": "nav-open",
+      "expanded": "true",
+      "navInert": false
+    },
+    {
+      "test": "open desktop navigation -> 768px",
+      "bodyClass": "",
+      "containerLeft": 0,
+      "desktopInert": true,
+      "headerExpanded": "false"
+    },
+    {
+      "test": "mobile Escape",
+      "expanded": "false",
+      "focused": "headerHumburger"
+    },
+    {
+      "test": "mobile rapid toggle settled",
+      "display": "none",
+      "expanded": "false"
+    },
+    {
+      "test": "newsletter keyboard Next",
+      "active": "swiper-slide newsSlide-2 swiper-slide-active"
+    },
+    {
+      "test": "menu thumbnail keyboard",
+      "target": "menuSlide-4",
+      "active": "swiper-slide menuSlide-4 swiper-slide-active"
+    },
+    {
+      "test": "menu thumbnail pointer",
+      "before": "swiper-slide menuSlide-1 swiper-slide-active",
+      "target": "menuSlide-3",
+      "active": "swiper-slide menuSlide-3 swiper-slide-active"
+    },
+    {
+      "test": "667x375 landscape mobile menu",
+      "clientHeight": 315,
+      "menu": {
+        "bottom": 375,
+        "height": 315,
+        "left": 0,
+        "right": 667,
+        "top": 60,
+        "width": 667,
+        "x": 0,
+        "y": 60
+      },
+      "overflowY": "auto",
+      "scrollHeight": 405,
+      "viewport": [
+        667,
+        375
+      ]
+    },
+    {
+      "test": "844x390 landscape sidebar",
+      "height": 390,
+      "menuBottom": 359,
+      "menuTop": 31
+    },
+    {
+      "test": "reload #contact-point",
+      "anchorTop": 60.03125,
+      "hash": "#contact-point",
+      "headerExpanded": "false",
+      "headingTop": 120.03125
+    },
+    {
+      "test": "all FAQ categories open",
+      "expanded": [
+        "true",
+        "true",
+        "true",
+        "true"
+      ]
+    },
+    {
+      "test": "shop select decorative arrow",
+      "result": "Native select expanded when clicking its right-hand arrow at 390px."
+    },
+    {
+      "test": "page top",
+      "hash": "#banner-point",
+      "scrollY": 0
+    }
+  ],
+  "autoplayObserved": [
+    {
+      "slider": "banner-swiper",
+      "observedSlides": [
+        "1 / 3",
+        "2 / 3"
+      ]
+    },
+    {
+      "slider": "menu-swiper",
+      "observedSlides": [
+        "1 / 4",
+        "2 / 4"
+      ]
+    },
+    {
+      "slider": "shopSwiper-01",
+      "observedSlides": [
+        "1 / 3",
+        "2 / 3"
+      ]
+    },
+    {
+      "slider": "shopSwiper-02",
+      "observedSlides": [
+        "1 / 3",
+        "2 / 3"
+      ]
+    }
+  ],
+  "consoleIssues": [],
+  "staticAssetReferences": {
+    "checked": 46,
+    "missing": 0
+  },
+  "unverified": [
+    "Physical iOS/Android touch and mobile browser chrome",
+    "Separate Safari/Firefox/Chrome cross-browser runs",
+    "Real form submission, booking, delivery and external business information"
+  ]
+}

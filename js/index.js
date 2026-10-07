@@ -1,113 +1,159 @@
-// 側邊欄開合
+// Keep the JavaScript breakpoint identical to the SCSS pad breakpoint.
+var mobileLayout = window.matchMedia('(max-width: 768px)');
+var $mobileNav = $('header nav').attr('id', 'mobile-navigation');
+var $desktopNav = $('aside nav').attr('id', 'desktop-navigation');
 
-$("aside").click(function () {
-    if (!$("body").hasClass('nav-open')) {
-        $("body").addClass('nav-open')
-    }
-})
+$('.headerHumburger, .headerCloser, .humburger, .navCloser, .faqCate')
+    .attr({ role: 'button', tabindex: '0' });
+$('.headerHumburger').attr({ 'aria-label': '開啟導覽', 'aria-controls': 'mobile-navigation' });
+$('.humburger').attr({ 'aria-label': '開啟導覽', 'aria-controls': 'desktop-navigation' });
+$('.headerCloser, .navCloser').attr('aria-label', '關閉導覽');
 
-$(".navCloser").click(function (event) {
-    if ($("body").hasClass('nav-open')) {
-        $("body").removeClass('nav-open')
-        event.stopPropagation()
-    }
-})
+function setDesktopNav(open) {
+    $('body').toggleClass('nav-open', open);
+    $('.humburger').attr({ 'aria-expanded': String(open), tabindex: open ? '-1' : '0' });
+    $('.navCloser').attr('tabindex', open ? '0' : '-1');
+    $desktopNav.prop('inert', !open);
+}
 
-$("#container").click(function () {
-    if ($("body").hasClass('nav-open')) {
-        $("body").removeClass('nav-open')
-    }
-})
-
-$("#banner").click(function () {
-    if ($("body").hasClass('nav-open')) {
-        $("body").removeClass('nav-open')
-    }
-})
-
-$(window).resize(function () {
-    if ($(window).width() < 768) {
-        $("body").removeClass('nav-open')
-    }
-})
-
-
-//  header
-
-$(".headerHumburger").click(function () {
-    if ($("header").hasClass('active')) {
-        $("header").removeClass('active')
-        $("header").children("nav").slideUp( 300)
-    }else{
-        $("header").addClass('active')
-        $("header").children("nav").slideDown( 450 )
-    }
-})
-
-$(".headerCloser").click(function () {
-    if ($("header").hasClass('active')) {
-        $("header").removeClass('active')
-        $("header").children("nav").slideUp( 300)
-    }else{
-        $("header").addClass('active')
-        $("header").children("nav").slideDown( 450 )
-    }
-})
-
-$(window).resize(function () {
-    if ($(window).width() > 768) {
-        $("header").removeClass('active')
-        $("header").children("nav").slideUp( 300)
-    }
-})
-
-//  FAQ
-
-$('.option').click(
-    function () {
-        $('.option,.contact-content').removeClass("active")
-        $(this).addClass("active")
-        $('.contact-content').eq($(this).index()).addClass("active")
-    }
-)
-
-$(".faqCate").click(function () {
-    if ($(this).hasClass('active')) {
-        $(this).removeClass("active")
-        $(this).children(".fa-caret-up").removeClass("fa-caret-up").addClass("fa-caret-down")
-        $(this).next().slideUp( 300)
+function setMobileNav(open, animate) {
+    $('header').toggleClass('active', open);
+    $('.headerHumburger').attr({
+        'aria-expanded': String(open),
+        'aria-label': open ? '關閉導覽' : '開啟導覽'
+    });
+    // Finish the current transition and discard queued animations before toggling.
+    $mobileNav.stop(true, true).prop('inert', !open);
+    if (animate === false) {
+        $mobileNav.toggle(open);
+    } else if (open) {
+        $mobileNav.slideDown(450);
     } else {
-        $(this).addClass("active")
-        $(this).children(".fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-up")
-        $(this).next().slideDown( 450 )
-    }
-})
-
-//當前導航位置
-
-window.onscroll = function () {
-
-
-    if (window.scrollY > $("#contact-point").offset().top - window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('contact-point')
-    } else if (window.scrollY > $("#shopInfo-point").offset().top - window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('shopInfo-point')
-    } else if (window.scrollY > $("#menu-point").offset().top - window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('menu-point')
-    } else if (window.scrollY > $("#newsLetter-point").offset().top - window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('newsLetter-point')
-    } else if (window.scrollY > $("#about-point").offset().top - window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('about-point')
-    } else if (window.scrollY < $("#banner-point").offset().top + window.innerHeight / 5) {
-        $("nav").removeClass()
-        $("nav").addClass('banner-point')
+        $mobileNav.slideUp(300);
     }
 }
+
+$('aside').on('click', function () {
+    if (!mobileLayout.matches) setDesktopNav(true);
+});
+$('.navCloser').on('click', function (event) {
+    event.stopPropagation();
+    setDesktopNav(false);
+    $('.humburger').trigger('focus');
+});
+$('#container').on('click', function () { setDesktopNav(false); });
+$('.headerHumburger').on('click', function () {
+    setMobileNav(!$('header').hasClass('active'));
+});
+$('.headerCloser').on('click', function () {
+    setMobileNav(false);
+    $('.headerHumburger').trigger('focus');
+});
+
+$('header nav a[href^="#"]').on('click', function () {
+    setMobileNav(false);
+    // Move focus out of the now-inert navigation without changing native scrolling.
+    var target = document.getElementById(this.hash.slice(1));
+    if (target) {
+        var section = target.parentElement;
+        section.setAttribute('tabindex', '-1');
+        section.focus({ preventScroll: true });
+    }
+});
+
+function resetNavigation() {
+    setDesktopNav(false);
+    setMobileNav(false, false);
+}
+mobileLayout.addEventListener('change', resetNavigation);
+resetNavigation();
+
+$(document).on('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    if ($('header').hasClass('active')) {
+        setMobileNav(false);
+        $('.headerHumburger').trigger('focus');
+    } else if ($('body').hasClass('nav-open')) {
+        setDesktopNav(false);
+        $('.humburger').trigger('focus');
+    }
+});
+
+// Tabs and FAQ retain their original appearance and independent open/closed state.
+var $options = $('.option');
+var $panels = $('.contact-content');
+$('.option-wrapper').attr({ role: 'tablist', 'aria-label': '聯絡資訊' });
+$options.each(function (index) {
+    $(this).attr({ role: 'tab', id: 'contact-tab-' + index,
+        'aria-controls': 'contact-panel-' + index });
+    $panels.eq(index).attr({ role: 'tabpanel', id: 'contact-panel-' + index,
+        'aria-labelledby': 'contact-tab-' + index });
+});
+
+function selectContactTab(index) {
+    $options.removeClass('active').attr({ 'aria-selected': 'false', tabindex: '-1' });
+    $options.eq(index).addClass('active').attr({ 'aria-selected': 'true', tabindex: '0' });
+    $panels.removeClass('active').eq(index).addClass('active');
+}
+$options.on('click', function () { selectContactTab($options.index(this)); });
+$options.on('keydown', function (event) {
+    var index = $options.index(this);
+    if (event.key === 'ArrowRight') index = (index + 1) % $options.length;
+    else if (event.key === 'ArrowLeft') index = (index + $options.length - 1) % $options.length;
+    else if (event.key === 'Home') index = 0;
+    else if (event.key === 'End') index = $options.length - 1;
+    else return;
+    event.preventDefault();
+    selectContactTab(index);
+    $options.eq(index).trigger('focus');
+});
+selectContactTab(0);
+
+$('.faqCate').each(function (index) {
+    $(this).attr({ id: 'faq-trigger-' + index, 'aria-expanded': 'false',
+        'aria-controls': 'faq-panel-' + index });
+    $(this).next().attr({ id: 'faq-panel-' + index, role: 'region',
+        'aria-labelledby': 'faq-trigger-' + index });
+}).on('click', function () {
+    var open = !$(this).hasClass('active');
+    $(this).toggleClass('active', open).attr('aria-expanded', String(open));
+    $(this).children('i').toggleClass('fa-caret-up', open).toggleClass('fa-caret-down', !open);
+    var $content = $(this).next().stop(true, true);
+    if (open) $content.slideDown(450);
+    else $content.slideUp(300);
+});
+
+$('.headerHumburger, .headerCloser, .humburger, .navCloser, .faqCate, .option')
+    .on('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            this.click();
+        }
+    });
+
+// Update only the navigation state classes, once per frame, including initial hashes.
+var sections = ['banner', 'about', 'newsLetter', 'menu', 'shopInfo', 'contact'];
+var navClasses = sections.map(function (id) { return id + '-point'; }).join(' ');
+var scrollFrame = null;
+function updateNavigation() {
+    scrollFrame = null;
+    var current = sections[0];
+    sections.forEach(function (id) {
+        if (document.getElementById(id + '-point').getBoundingClientRect().top <= window.innerHeight / 5) {
+            current = id;
+        }
+    });
+    $('header nav, aside nav').removeClass(navClasses).addClass(current + '-point');
+    $('nav a[href^="#"]').removeAttr('aria-current')
+        .filter('[href="#' + current + '-point"]').attr('aria-current', 'location');
+}
+function scheduleNavigationUpdate() {
+    if (scrollFrame === null) scrollFrame = requestAnimationFrame(updateNavigation);
+}
+window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
+window.addEventListener('resize', scheduleNavigationUpdate);
+window.addEventListener('load', scheduleNavigationUpdate);
+updateNavigation();
 
 // Swiper
 var bannerSwiper = new Swiper('.banner-swiper', {
@@ -127,8 +173,9 @@ var newsLetterSwiper = new Swiper('.newsLetter-swiper', {
     loop: true,
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '#newsLetter .swiper-button-next',
+        prevEl: '#newsLetter .swiper-button-prev',
+        addIcons: false,
     },
 });
 
@@ -140,7 +187,6 @@ var submenuSwiper = new Swiper('.subMenu-swiper', {
     spaceBetween: 16,
     slidesPerView: 4,
     freeMode: true,
-    watchSlidesVisibility: true,
     watchSlidesProgress: true,
 });
 var menuSwiper = new Swiper('.menu-swiper', {
@@ -153,6 +199,15 @@ var menuSwiper = new Swiper('.menu-swiper', {
         swiper: submenuSwiper
     }
 });
+
+$('.subMenu-swiper .swiper-slide').attr({ role: 'button', tabindex: '0' })
+    .each(function () { $(this).attr('aria-label', $(this).find('p').text()); })
+    .on('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            menuSwiper.slideToLoop($(this).index());
+        }
+    });
 
 
 
