@@ -232,6 +232,12 @@
       "links_top": 31,
       "links_bottom": 359,
       "result": "pass"
+    },
+    {
+      "name": "page top link",
+      "hash": "#banner-point",
+      "scrollY": 0,
+      "result": "pass"
     }
   ],
   "static_checks": {
@@ -253,5 +259,52 @@
     "Safari",
     "Firefox",
     "unimplemented sending/reservation services"
-  ]
+  ],
+  "deployment": {
+    "date": "2026-10-07",
+    "source": "portfolio/qa",
+    "directory": "/",
+    "code_commit": "74c0b1b274595da84e7a76d5596c8fd301560bc5",
+    "run": "https://github.com/cutecat8110/leo-chiu/actions/runs/37610196377",
+    "conclusion": "success",
+    "url": "https://cutecat8110.github.io/leo-chiu/",
+    "live_hash_checks": [
+      {
+        "file": "index.html",
+        "status": 200,
+        "same_as_local": true,
+        "sha256": "157975bb97319c8730a78bf28193d677f9524fe59d1e7bd5730c3e869f4461f0"
+      },
+      {
+        "file": "css/qa.css",
+        "status": 200,
+        "same_as_local": true,
+        "sha256": "e00056f9048fc91ababeacd77a8e4acfcfcbec83871e0fcb8628509283c2e041"
+      },
+      {
+        "file": "js/index.js",
+        "status": 200,
+        "same_as_local": true,
+        "sha256": "ed81d0be015545030c5a2ff1cee4f89b5185397e8f40dccac75fc8aa2472980b"
+      },
+      {
+        "file": "css/style.css",
+        "status": 200,
+        "same_as_local": true,
+        "sha256": "1f4f1323bd402df0f937e7df0b7be2f50d63b80d761c80dd3b9772403795d533"
+      }
+    ],
+    "smoke_test": {
+      "width321_heading_heights": [
+        56,
+        56
+      ],
+      "width321_scrollWidth": 321,
+      "broken_images": 0,
+      "mobile_navigation_closes": true,
+      "faq_tab_and_keyboard_open": "pass",
+      "console_errors_and_warnings": []
+    },
+    "screenshot": "round2-live-menu-321.jpg"
+  }
 }

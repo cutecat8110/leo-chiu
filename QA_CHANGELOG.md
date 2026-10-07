@@ -83,6 +83,15 @@
 - JavaScript 語法、Sass 編譯與 CSS 比對、Git whitespace、46 筆本機資源路徑與靜態 ID 唯一性皆通過；Chrome 收集的 console error／warning 為空。
 - 第一輪結果保留於 [results.json](docs/qa/results.json)，第二輪結果見 [round2-results.json](docs/qa/round2-results.json)。
 
+### GitHub Pages 發布與線上驗證
+
+- 2026-10-07：已將 Pages 來源由 `main / (root)` 切換為 `portfolio/qa / (root)`，保留 HTTPS 與原網址；未修改 `main`。
+- 程式修正提交：`74c0b1b274595da84e7a76d5596c8fd301560bc5`；[Pages 建置／部署 #10](https://github.com/cutecat8110/leo-chiu/actions/runs/37610196377) 結果為 **success**。
+- [正式網站](https://cutecat8110.github.io/leo-chiu/) 的 `index.html`、`css/qa.css`、`js/index.js` 與 `css/style.css` 均 HTTP 200，逐位元比對與已測試的本機檔案一致。
+- 正式站 321×900：兩個餐點標題皆單行 56px，document width=321、圖片無載入失敗；390×844 的手機選單跳轉收合、FAQ 頁籤及 Enter 展開通過，console error／warning 為空。
+- 本機 CONTACT 在跳轉完成後重新整理，錨點仍位於 y≈60px；回頂端連結回到 scrollY=0。
+- 線上截圖：[321px 餐點區](docs/qa/round2-live-menu-321.jpg)。
+
 ## 第一輪驗證摘要
 
 | 尺寸 | 結果 |
