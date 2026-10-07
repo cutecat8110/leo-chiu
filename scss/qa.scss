@@ -118,6 +118,12 @@ html body #container main #contact .selectWrap::after {
     letter-spacing: 0.25em;
     text-indent: 0.25em;
   }
+
+  // Match the original section selectors so their larger indent cannot win.
+  html body #container main #menu .menu-container .menu-wrapper .text > :first-child h2,
+  html body #container main #menu .charge .text h2 {
+    text-indent: 0.25em;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 480px) {

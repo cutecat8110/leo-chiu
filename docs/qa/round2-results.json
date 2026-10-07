@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-07",
+  "base_commit": "db4e1a34306bec6e047b42a7e45cee5a529991fb",
+  "environment": {
+    "os": "macOS",
+    "browser": "Google Chrome 155.0.8059.39",
+    "method": "viewport emulation via browser extension",
+    "physical_devices": false
+  },
+  "layouts": [
+    {
+      "width": 320,
+      "height": 900,
+      "document_width": 320,
+      "broken_html_images": 0,
+      "menu_heading_height": 40
+    },
+    {
+      "width": 321,
+      "height": 900,
+      "document_width": 321,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "document_width": 360,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 375,
+      "height": 900,
+      "document_width": 375,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 390,
+      "height": 900,
+      "document_width": 390,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 480,
+      "height": 900,
+      "document_width": 480,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 481,
+      "height": 900,
+      "document_width": 481,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 600,
+      "height": 900,
+      "document_width": 600,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "document_width": 768,
+      "broken_html_images": 0,
+      "menu_heading_height": 56
+    },
+    {
+      "width": 769,
+      "height": 900,
+      "document_width": 769,
+      "broken_html_images": 0,
+      "menu_heading_height": 288
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "document_width": 1024,
+      "broken_html_images": 0,
+      "menu_heading_height": 288
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "document_width": 1440,
+      "broken_html_images": 0,
+      "menu_heading_height": 288
+    }
+  ],
+  "fix": {
+    "id": "QA-007",
+    "width": 321,
+    "heading_height_before": 112,
+    "heading_height_after": 56,
+    "indent_before": 24,
+    "indent_after": 12,
+    "screenshots": [
+      "round2-before-menu-321.jpg",
+      "round2-after-menu-321.jpg"
+    ]
+  },
+  "checks": [
+    {
+      "name": "mobile and desktop chapter navigation",
+      "anchors": [
+        "banner",
+        "about",
+        "newsLetter",
+        "menu",
+        "shopInfo",
+        "contact"
+      ],
+      "mobile_closes": true,
+      "result": "pass"
+    },
+    {
+      "name": "desktop open to 768px",
+      "nav_open": false,
+      "container_left": 0,
+      "mobile_expanded": false,
+      "result": "pass"
+    },
+    {
+      "name": "mobile open to desktop; desktop Escape focus return",
+      "result": "pass"
+    },
+    {
+      "name": "mobile anchor and reload after settled navigation",
+      "viewport": [
+        390,
+        844
+      ],
+      "hash": "#contact-point",
+      "anchor_top": 60.03125,
+      "result": "pass"
+    },
+    {
+      "name": "mobile menu Enter/Escape; tabs ArrowRight/Home; all four FAQ Enter/Space",
+      "result": "pass"
+    },
+    {
+      "name": "rapid toggles",
+      "faq_clicks": 9,
+      "faq_expanded": true,
+      "faq_display": "block",
+      "other_faq_display": "none",
+      "mobile_clicks": 8,
+      "mobile_expanded": false,
+      "mobile_display": "none",
+      "result": "pass"
+    },
+    {
+      "name": "news next click then previous Enter after transition",
+      "slides": [
+        "1 / 8",
+        "2 / 8",
+        "1 / 8"
+      ],
+      "result": "pass"
+    },
+    {
+      "name": "news offscreen keyboard link moves into clipping viewport",
+      "focused_slide": "5 / 8",
+      "active_slide": "5 / 8",
+      "focused_left": 147.49,
+      "result": "pass"
+    },
+    {
+      "name": "menu thumbnail selection",
+      "keyboard_slide": "4 / 4",
+      "pointer_slide": "2 / 4",
+      "result": "pass"
+    },
+    {
+      "name": "autoplay distinct DOM slide observations",
+      "banner": [
+        "3 / 3",
+        "2 / 3"
+      ],
+      "menu": [
+        "4 / 4",
+        "2 / 4",
+        "1 / 4"
+      ],
+      "shop_1": [
+        "3 / 3",
+        "2 / 3"
+      ],
+      "shop_2": [
+        "3 / 3",
+        "2 / 3"
+      ],
+      "result": "pass"
+    },
+    {
+      "name": "six form inputs",
+      "fields": [
+        "shop",
+        "date",
+        "name",
+        "phone",
+        "mail",
+        "detail"
+      ],
+      "submitted": false,
+      "result": "pass"
+    },
+    {
+      "name": "landscape mobile menu",
+      "viewport": [
+        667,
+        375
+      ],
+      "height": 315,
+      "scrollHeight": 405,
+      "overflow": "auto",
+      "close_reachable": true,
+      "result": "pass"
+    },
+    {
+      "name": "landscape desktop menu",
+      "viewport": [
+        844,
+        390
+      ],
+      "links_top": 31,
+      "links_bottom": 359,
+      "result": "pass"
+    }
+  ],
+  "static_checks": {
+    "javascript_syntax": "pass",
+    "sass_compile_and_css_match": "pass",
+    "git_whitespace": "pass",
+    "local_asset_references": 46,
+    "missing_local_assets": 0,
+    "duplicate_static_ids": false
+  },
+  "console_errors_and_warnings": [],
+  "notes": [
+    "Long headings at intermediate widths retain complete-word wrapping.",
+    "Swiper ignores a reverse request during an active transition; normal settled controls and clipping passed.",
+    "Results summarize observed browser measurements; the first-round report remains separate."
+  ],
+  "not_tested": [
+    "iOS/Android physical devices",
+    "Safari",
+    "Firefox",
+    "unimplemented sending/reservation services"
+  ]
+}
