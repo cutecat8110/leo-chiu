@@ -1,0 +1,122 @@
+[
+  {
+    "source": "img/about/5.jpg",
+    "target": "img/about/5.webp"
+  },
+  {
+    "source": "img/about/use-1.jpg",
+    "target": "img/about/use-1.webp"
+  },
+  {
+    "source": "img/about/use-2.jpg",
+    "target": "img/about/use-2.webp"
+  },
+  {
+    "source": "img/about/use-3.jpg",
+    "target": "img/about/use-3.webp"
+  },
+  {
+    "source": "img/about/use-41.jpg",
+    "target": "img/about/use-41.webp"
+  },
+  {
+    "source": "img/background/11.jpg",
+    "target": "img/background/11.webp"
+  },
+  {
+    "source": "img/background/9.jpg",
+    "target": "img/background/9.webp"
+  },
+  {
+    "source": "img/banner/use-01.jpg",
+    "target": "img/banner/use-01.webp"
+  },
+  {
+    "source": "img/banner/use-02.jpg",
+    "target": "img/banner/use-02.webp"
+  },
+  {
+    "source": "img/banner/use-03.jpg",
+    "target": "img/banner/use-03.webp"
+  },
+  {
+    "source": "img/menu/use-1.jpg",
+    "target": "img/menu/use-1.webp"
+  },
+  {
+    "source": "img/menu/use-2.jpg",
+    "target": "img/menu/use-2.webp"
+  },
+  {
+    "source": "img/menu/use-3.jpg",
+    "target": "img/menu/use-3.webp"
+  },
+  {
+    "source": "img/menu/use-4.jpg",
+    "target": "img/menu/use-4.webp"
+  },
+  {
+    "source": "img/menu/use-5.jpg",
+    "target": "img/menu/use-5.webp"
+  },
+  {
+    "source": "img/menu/use-6.jpg",
+    "target": "img/menu/use-6.webp"
+  },
+  {
+    "source": "img/new/2020_02_05.jpg",
+    "target": "img/new/2020_02_05.webp"
+  },
+  {
+    "source": "img/new/2020_02_09.jpg",
+    "target": "img/new/2020_02_09.webp"
+  },
+  {
+    "source": "img/new/2020_03_20.jpg",
+    "target": "img/new/2020_03_20.webp"
+  },
+  {
+    "source": "img/new/2020_04_09.jpg",
+    "target": "img/new/2020_04_09.webp"
+  },
+  {
+    "source": "img/new/2020_04_19.jpg",
+    "target": "img/new/2020_04_19.webp"
+  },
+  {
+    "source": "img/new/2020_05_01.jpg",
+    "target": "img/new/2020_05_01.webp"
+  },
+  {
+    "source": "img/new/2020_05_07.jpg",
+    "target": "img/new/2020_05_07.webp"
+  },
+  {
+    "source": "img/new/2020_08_07.jpg",
+    "target": "img/new/2020_08_07.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-1.jpg",
+    "target": "img/shopInfo/shop-01/use-1.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-2.jpg",
+    "target": "img/shopInfo/shop-01/use-2.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-3.jpg",
+    "target": "img/shopInfo/shop-01/use-3.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-1.jpg",
+    "target": "img/shopInfo/shop-02/use-1.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-2.jpg",
+    "target": "img/shopInfo/shop-02/use-2.webp"
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-3.jpg",
+    "target": "img/shopInfo/shop-02/use-3.webp"
+  }
+]

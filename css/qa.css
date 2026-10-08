@@ -113,3 +113,8 @@ html body #container main #contact .selectWrap::after {
     text-indent: 0.05em;
   }
 }
+/* Photos begin loading before their section enters the viewport. */
+html.defer-images .lazy-background:not(.images-ready),
+html.defer-images .lazy-background:not(.images-ready) * {
+  background-image: none !important;
+}

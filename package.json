@@ -1,0 +1,10 @@
+{
+  "name": "leo-chiu",
+  "private": true,
+  "scripts": {
+    "images:optimize": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.32.6"
+  }
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "source": "img/about/5.jpg",
+    "target": "img/about/5.webp",
+    "width": 832,
+    "height": 924,
+    "originalBytes": 525831,
+    "optimizedBytes": 98156
+  },
+  {
+    "source": "img/about/use-1.jpg",
+    "target": "img/about/use-1.webp",
+    "width": 640,
+    "height": 576,
+    "originalBytes": 116982,
+    "optimizedBytes": 52644
+  },
+  {
+    "source": "img/about/use-2.jpg",
+    "target": "img/about/use-2.webp",
+    "width": 1080,
+    "height": 972,
+    "originalBytes": 90559,
+    "optimizedBytes": 30272
+  },
+  {
+    "source": "img/about/use-3.jpg",
+    "target": "img/about/use-3.webp",
+    "width": 1750,
+    "height": 700,
+    "originalBytes": 123114,
+    "optimizedBytes": 61382
+  },
+  {
+    "source": "img/about/use-41.jpg",
+    "target": "img/about/use-41.webp",
+    "width": 670,
+    "height": 582,
+    "originalBytes": 77915,
+    "optimizedBytes": 25594
+  },
+  {
+    "source": "img/background/11.jpg",
+    "target": "img/background/11.webp",
+    "width": 1400,
+    "height": 633,
+    "originalBytes": 247240,
+    "optimizedBytes": 38074
+  },
+  {
+    "source": "img/background/9.jpg",
+    "target": "img/background/9.webp",
+    "width": 600,
+    "height": 600,
+    "originalBytes": 20734,
+    "optimizedBytes": 4516
+  },
+  {
+    "source": "img/banner/use-01.jpg",
+    "target": "img/banner/use-01.webp",
+    "width": 1920,
+    "height": 1080,
+    "originalBytes": 430235,
+    "optimizedBytes": 321572
+  },
+  {
+    "source": "img/banner/use-02.jpg",
+    "target": "img/banner/use-02.webp",
+    "width": 1920,
+    "height": 1080,
+    "originalBytes": 211667,
+    "optimizedBytes": 110212
+  },
+  {
+    "source": "img/banner/use-03.jpg",
+    "target": "img/banner/use-03.webp",
+    "width": 1920,
+    "height": 1080,
+    "originalBytes": 392905,
+    "optimizedBytes": 347110
+  },
+  {
+    "source": "img/menu/use-1.jpg",
+    "target": "img/menu/use-1.webp",
+    "width": 1121,
+    "height": 736,
+    "originalBytes": 285634,
+    "optimizedBytes": 201582
+  },
+  {
+    "source": "img/menu/use-2.jpg",
+    "target": "img/menu/use-2.webp",
+    "width": 1000,
+    "height": 657,
+    "originalBytes": 117533,
+    "optimizedBytes": 60224
+  },
+  {
+    "source": "img/menu/use-3.jpg",
+    "target": "img/menu/use-3.webp",
+    "width": 2048,
+    "height": 1345,
+    "originalBytes": 323965,
+    "optimizedBytes": 242330
+  },
+  {
+    "source": "img/menu/use-4.jpg",
+    "target": "img/menu/use-4.webp",
+    "width": 960,
+    "height": 630,
+    "originalBytes": 112809,
+    "optimizedBytes": 48318
+  },
+  {
+    "source": "img/menu/use-5.jpg",
+    "target": "img/menu/use-5.webp",
+    "width": 573,
+    "height": 733,
+    "originalBytes": 106681,
+    "optimizedBytes": 41990
+  },
+  {
+    "source": "img/menu/use-6.jpg",
+    "target": "img/menu/use-6.webp",
+    "width": 844,
+    "height": 1080,
+    "originalBytes": 232717,
+    "optimizedBytes": 176554
+  },
+  {
+    "source": "img/new/2020_02_05.jpg",
+    "target": "img/new/2020_02_05.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 275294,
+    "optimizedBytes": 44934
+  },
+  {
+    "source": "img/new/2020_02_09.jpg",
+    "target": "img/new/2020_02_09.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 231653,
+    "optimizedBytes": 33996
+  },
+  {
+    "source": "img/new/2020_03_20.jpg",
+    "target": "img/new/2020_03_20.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 249407,
+    "optimizedBytes": 43844
+  },
+  {
+    "source": "img/new/2020_04_09.jpg",
+    "target": "img/new/2020_04_09.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 387335,
+    "optimizedBytes": 88792
+  },
+  {
+    "source": "img/new/2020_04_19.jpg",
+    "target": "img/new/2020_04_19.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 287967,
+    "optimizedBytes": 49410
+  },
+  {
+    "source": "img/new/2020_05_01.jpg",
+    "target": "img/new/2020_05_01.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 213071,
+    "optimizedBytes": 31112
+  },
+  {
+    "source": "img/new/2020_05_07.jpg",
+    "target": "img/new/2020_05_07.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 246015,
+    "optimizedBytes": 44200
+  },
+  {
+    "source": "img/new/2020_08_07.jpg",
+    "target": "img/new/2020_08_07.webp",
+    "width": 640,
+    "height": 640,
+    "originalBytes": 257825,
+    "optimizedBytes": 49462
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-1.jpg",
+    "target": "img/shopInfo/shop-01/use-1.webp",
+    "width": 991,
+    "height": 1062,
+    "originalBytes": 363710,
+    "optimizedBytes": 277190
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-2.jpg",
+    "target": "img/shopInfo/shop-01/use-2.webp",
+    "width": 1050,
+    "height": 1127,
+    "originalBytes": 345702,
+    "optimizedBytes": 266710
+  },
+  {
+    "source": "img/shopInfo/shop-01/use-3.jpg",
+    "target": "img/shopInfo/shop-01/use-3.webp",
+    "width": 1080,
+    "height": 1159,
+    "originalBytes": 266967,
+    "optimizedBytes": 168922
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-1.jpg",
+    "target": "img/shopInfo/shop-02/use-1.webp",
+    "width": 560,
+    "height": 600,
+    "originalBytes": 134223,
+    "optimizedBytes": 59384
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-2.jpg",
+    "target": "img/shopInfo/shop-02/use-2.webp",
+    "width": 1009,
+    "height": 1083,
+    "originalBytes": 244771,
+    "optimizedBytes": 153500
+  },
+  {
+    "source": "img/shopInfo/shop-02/use-3.jpg",
+    "target": "img/shopInfo/shop-02/use-3.webp",
+    "width": 756,
+    "height": 810,
+    "originalBytes": 227283,
+    "optimizedBytes": 143660
+  }
+]
