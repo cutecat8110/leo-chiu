@@ -21,7 +21,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 瀏覽 `http://127.0.0.1:8765/`。請使用 HTTP 伺服器預覽，避免以 `file://` 開啟時 SVG 載入受到限制。
 
-- QA／展示分支：`portfolio/qa`。GitHub Pages 發布設定使用 `Deploy from a branch`、`portfolio/qa`、`/ (root)`，`main` 保留原版。
+- 開發與發布統一使用 `main`。GitHub Pages 設定使用 `Deploy from a branch`、`main`、`/ (root)`。
 - [逐項修正、重現步驟、驗證結果與已知限制](QA_CHANGELOG.md)
 - [第一輪測試結果](docs/qa/results.json)／[第二輪測試結果](docs/qa/round2-results.json)
 - SEND、訂位、READ MORE、DETAIL 等原有展示元件未新增功能；此版本不會送出聯絡資料或建立訂位。
