@@ -1,17 +1,24 @@
-# 樂丘廚房 - 餐廳形象網站
+# 樂丘廚房｜餐廳形象網站
 
-> 餐廳形象網站，展示品牌故事、菜單輪播、店鋪資訊與 FAQ。
+![HTML](https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-![](https://cutecat8110.github.io/leo-chiu/demo.png)
+以 HTML、SCSS 與 JavaScript 製作餐點輪播、章節導覽、菜單及 FAQ 互動。
 
+**[Demo](https://cutecat8110.github.io/leo-chiu/)**
 
-## 📋 專案概述
+![樂丘廚房餐點主視覺與導覽](demo.png)
 
-以 HTML、CSS、JavaScript 製作，練習響應式切版、輪播與導覽互動。
+<details>
+<summary>使用說明</summary>
 
-* [Demo](https://cutecat8110.github.io/leo-chiu/)
+SEND、訂位、READ MORE、DETAIL 為展示元件，不會寄出資料或建立訂位。字型、圖示及部分套件由外部 CDN 載入。
 
-## 本機預覽與 QA
+</details>
+
+<details>
+<summary>開發、測試與部署</summary>
 
 這是純靜態作品，預覽不需要安裝前端依賴或建立後端。在專案目錄執行：
 
@@ -26,7 +33,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - [第一輪測試結果](docs/qa/results.json)／[第二輪測試結果](docs/qa/round2-results.json)
 - SEND、訂位、READ MORE、DETAIL 等原有展示元件未新增功能；此版本不會送出聯絡資料或建立訂位。
 
-原本的主樣式保留。這次的樣式修正集中於 `scss/qa.scss`，瀏覽器載入其編譯產物 `css/qa.css`。修改該 SCSS 後，使用 Node.js/npm 編譯並一併提交兩個檔案：
+原本的主樣式保留。補充樣式位於 `scss/qa.scss`，瀏覽器載入其編譯產物 `css/qa.css`。修改該 SCSS 後，使用 Node.js/npm 編譯並一併提交兩個檔案：
 
 ```sh
 npx --yes sass@1.93.2 --no-source-map scss/qa.scss css/qa.css
@@ -36,65 +43,17 @@ git diff --check
 
 Swiper 的 JavaScript 與 CSS 固定為 `14.3.0`；字型、圖示、jQuery 與 Swiper 仍由外部 CDN 提供，預覽需要網路連線。
 
-## 🔨 核心技術
-
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML" >
-          HTML
-        </a>
-      </td>
-      <td>超文本標記語言</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS" >
-          CSS
-        </a>
-      </td>
-      <td>風格頁面語言</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript" >
-          JavaScript
-        </a>
-      </td>
-      <td>腳本語言</td>
-    </tr>
-  </tbody>
-</table>
-
-
-## 🛠️ 擴展套件
-
-<table>
-  <tbody>
-  <tr>
-      <td>
-        <a href="https://jquery.com/">
-          jQuery
-        </a>
-      </td>
-      <td>快速、且精簡的 JavaScript 函式庫</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://swiperjs.com/">
-          Swiper
-        </a>
-      </td>
-      <td>輪播/滑動組件</td>
-    </tr>
-  </tbody>
-</table>
-
-## 載入維護（2026-10-08）
+### 素材維護
 
 原始圖片與設計保留，網站引用預先產生的 WebP。更新原圖後，以 Node 22 執行 `npm ci`、`npm run images:optimize`；一併提交 WebP 與 `qa/image-sizes.json`，一般發布不會即時轉圖。圖片來源與輸出清單在 `scripts/image-sources.json`。僅本機預覽依然只需 Python HTTP server；不需要執行 npm。
 
-檢查方法、數據及外部服務限制見 [QA_CHANGELOG.md](QA_CHANGELOG.md)。
+</details>
 
-[介面設計規範](DESIGN_GUIDELINES.md)
+<details>
+<summary>技術與套件</summary>
+
+[HTML](https://developer.mozilla.org/zh-TW/docs/Web/HTML) · [CSS](https://developer.mozilla.org/zh-TW/docs/Web/CSS) · [JavaScript](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript) · [jQuery](https://jquery.com/) · [Swiper](https://swiperjs.com/)
+
+</details>
+
+[QA 紀錄](QA_CHANGELOG.md) · [介面設計規範](DESIGN_GUIDELINES.md)
