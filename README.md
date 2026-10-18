@@ -94,8 +94,6 @@ python3 -m http.server 8765 --bind 127.0.0.1
 瀏覽 `http://127.0.0.1:8765/`。請使用 HTTP 伺服器預覽，避免以 `file://` 開啟時 SVG 載入受到限制。
 
 - 開發與發布統一使用 `main`。GitHub Pages 設定使用 `Deploy from a branch`、`main`、`/ (root)`。
-- [逐項修正、重現步驟、驗證結果與已知限制](QA_CHANGELOG.md)
-- [第一輪測試結果](docs/qa/results.json)／[第二輪測試結果](docs/qa/round2-results.json)
 - SEND、訂位、READ MORE、DETAIL 等原有展示元件未新增功能；此版本不會送出聯絡資料或建立訂位。
 
 原本的主樣式保留。補充樣式位於 `scss/qa.scss`，瀏覽器載入其編譯產物 `css/qa.css`。修改該 SCSS 後，使用 Node.js/npm 編譯並一併提交兩個檔案：
@@ -113,5 +111,3 @@ Swiper 的 JavaScript 與 CSS 固定為 `14.3.0`；字型、圖示、jQuery 與 
 原始圖片與設計保留，網站引用預先產生的 WebP。更新原圖後，以 Node 22 執行 `npm ci`、`npm run images:optimize`；一併提交 WebP 與 `qa/image-sizes.json`，一般發布不會即時轉圖。圖片來源與輸出清單在 `scripts/image-sources.json`。僅本機預覽依然只需 Python HTTP server；不需要執行 npm。
 
 </details>
-
-[QA 紀錄](QA_CHANGELOG.md) · [介面設計規範](DESIGN_GUIDELINES.md)
