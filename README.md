@@ -1,24 +1,89 @@
-# 樂丘廚房｜餐廳形象網站
+# 樂丘廚房 - 餐廳形象網站
 
 ![HTML](https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-以 HTML、SCSS 與 JavaScript 製作餐點輪播、章節導覽、菜單及 FAQ 互動。
-
-**[Demo](https://cutecat8110.github.io/leo-chiu/)**
+> 餐廳形象網站，展示品牌故事、菜單輪播、店鋪資訊與 FAQ。
 
 ![樂丘廚房餐點主視覺與導覽](demo.png)
 
-<details>
-<summary>使用說明</summary>
+## 📋 專案概述
+
+以 HTML、SCSS 與 JavaScript 製作，練習響應式切版、輪播與導覽互動。內容包含餐點介紹、菜單縮圖切換、聯絡／FAQ 頁籤，以及手機選單與章節定位。
+
+**[Demo](https://cutecat8110.github.io/leo-chiu/)**
+
+## 🔨 核心技術
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML" >
+          HTML
+        </a>
+      </td>
+      <td>超文本標記語言</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS" >
+          CSS
+        </a>
+      </td>
+      <td>風格頁面語言</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript" >
+          JavaScript
+        </a>
+      </td>
+      <td>腳本語言</td>
+    </tr>
+  </tbody>
+</table>
+
+## 🛠️ 擴展套件
+
+<table>
+  <tbody>
+  <tr>
+      <td>
+        <a href="https://jquery.com/">
+          jQuery
+        </a>
+      </td>
+      <td>快速、且精簡的 JavaScript 函式庫</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://swiperjs.com/">
+          Swiper
+        </a>
+      </td>
+      <td>輪播/滑動組件</td>
+    </tr>
+  </tbody>
+</table>
+
+## 🌸 啟動指南
+
+這是純靜態網站，在專案目錄執行：
+
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+開啟 `http://127.0.0.1:8765/`。
+
+## 使用說明
 
 SEND、訂位、READ MORE、DETAIL 為展示元件，不會寄出資料或建立訂位。字型、圖示及部分套件由外部 CDN 載入。
 
-</details>
-
 <details>
-<summary>開發、測試與部署</summary>
+<summary>測試、部署與維護</summary>
 
 這是純靜態作品，預覽不需要安裝前端依賴或建立後端。在專案目錄執行：
 
@@ -46,13 +111,6 @@ Swiper 的 JavaScript 與 CSS 固定為 `14.3.0`；字型、圖示、jQuery 與 
 ### 素材維護
 
 原始圖片與設計保留，網站引用預先產生的 WebP。更新原圖後，以 Node 22 執行 `npm ci`、`npm run images:optimize`；一併提交 WebP 與 `qa/image-sizes.json`，一般發布不會即時轉圖。圖片來源與輸出清單在 `scripts/image-sources.json`。僅本機預覽依然只需 Python HTTP server；不需要執行 npm。
-
-</details>
-
-<details>
-<summary>技術與套件</summary>
-
-[HTML](https://developer.mozilla.org/zh-TW/docs/Web/HTML) · [CSS](https://developer.mozilla.org/zh-TW/docs/Web/CSS) · [JavaScript](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript) · [jQuery](https://jquery.com/) · [Swiper](https://swiperjs.com/)
 
 </details>
 
