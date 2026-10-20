@@ -1,5 +1,7 @@
 // Keep the JavaScript breakpoint identical to the SCSS pad breakpoint.
 var mobileLayout = window.matchMedia('(max-width: 768px)');
+var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+$.fx.off = reducedMotion.matches;
 var $mobileNav = $('header nav').attr('id', 'mobile-navigation');
 var $desktopNav = $('aside nav').attr('id', 'desktop-navigation');
 
@@ -171,6 +173,10 @@ var newsLetterSwiper = new Swiper('.newsLetter-swiper', {
     slidesPerView: 3,
     spaceBetween: 36,
     loop: true,
+    a11y: {
+        prevSlideMessage: '上一則消息',
+        nextSlideMessage: '下一則消息',
+    },
 
     navigation: {
         nextEl: '#newsLetter .swiper-button-next',
@@ -230,6 +236,24 @@ var shopSwiper02 = new Swiper('.shopSwiper-02', {
         delay: 4500,
     },
 });
+
+var motionSliders = [bannerSwiper, newsLetterSwiper, submenuSwiper, menuSwiper, shopSwiper01, shopSwiper02]
+    .map(function (swiper) {
+        return { swiper: swiper, speed: swiper.params.speed, autoplay: !!(swiper.autoplay && swiper.autoplay.running) };
+    });
+function applyMotionPreference() {
+    $.fx.off = reducedMotion.matches;
+    $mobileNav.add($('.faqCate').next()).stop(true, true);
+    motionSliders.forEach(function (entry) {
+        entry.swiper.params.speed = reducedMotion.matches ? 0 : entry.speed;
+        if (entry.autoplay) {
+            if (reducedMotion.matches) entry.swiper.autoplay.stop();
+            else entry.swiper.autoplay.start();
+        }
+    });
+}
+reducedMotion.addEventListener('change', applyMotionPreference);
+applyMotionPreference();
 
 // img>svg 直接css改顏色
 

@@ -141,3 +141,13 @@ html.defer-images .lazy-background:not(.images-ready),
 html.defer-images .lazy-background:not(.images-ready) * {
   background-image: none !important;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
